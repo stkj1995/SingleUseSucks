@@ -5,9 +5,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-/* Farvepalette */
-:root {
+@layer base {
+  /* Farvepalette */
+  :root {
     --dark-blue: #003366;
     --coral: #ff6f61;
     --white: #ffffff;
@@ -31,4 +31,59 @@ body {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(to right, #000000, #ffffff);
   color: var(--dark-blue);
+}
+
+/* Tekstskygge */
+.text-shadow {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Button styling */
+button {
+  background-color: var(--button-bg);
+  color: var(--white);
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+/* Link styling */
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Custom cursor */
+.custom-cursor {
+  cursor: url("../assets/images/custom-cursor.png"), auto;
+}
+
+/* Progress bar styles */
+
+/* Flip animation */
+
+/* Border animation */
+
+/* Keyframes */
+
+/*:hover video*/
+#videoonhover video {
+  transform: scale(1);
+}
+
+#videoonhover video:hover {
+  transform: scale(1.15); /* Tilføj zoom-effekt ved hover */
+}
+
+@layer components {
+  /* Eksempel på knapkomponent */
+  .btn {
+    @apply bg-button-bg text-white font-semibold py-2 px-4 rounded;
+  }
 }
