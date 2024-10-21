@@ -1,10 +1,27 @@
 ---
-import Link from './Link.astro';
+import Link from '../components/Link.astro';
 ---
-<nav class="w-full flex items-center justify-between p-4 bg-gray-800 fixed top-0 z-50">
+
+<nav x-data="{ isOpen: false }" class="w-full flex items-center justify-between p-4 bg-gray-800 fixed top-0 z-50">
     <div class="text-white">Logo</div>
     <div class="block md:hidden">
-        <!-- Mobil menu -->
+        <button 
+            @click="isOpen = !isOpen" 
+            class="text-white focus:outline-none">
+            <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+            <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+    <div x-show="isOpen" @click.away="isOpen = false" class="absolute top-16 left-0 w-full bg-gray-800 transition-transform duration-300">
+        <div class="flex flex-col space-y-4 p-4">
+            <Link href="/" class="text-white">Hjem</Link>
+            <Link href="/om" class="text-white">Om</Link>
+            <Link href="/kontakt" class="text-white">Kontakt</Link>
+        </div>
     </div>
     <div class="hidden md:flex space-x-4">
         <Link href="/" class="text-white">Hjem</Link>
