@@ -65,7 +65,22 @@ a:hover {
 }
 
 /* Progress bar styles */
-
+.progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px; /* Tilpasset for at matche din højde */
+    background-color: transparent; /* For at vise baggrundsfargen korrekt */
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, #4caf50, #2196F3); /* Gradient farver */
+    transform-origin: left;
+    transition: transform 0.25s ease;
+  }
+  
 /* Flip animation */
 
 /* Border animation */

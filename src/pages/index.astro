@@ -11,12 +11,66 @@ import "../styles/tobii.min.css";
         body {
             cursor: url('/src/assets/images/thumbsup.png'), auto;
         }
-    </style> 
-	<article class="">
+    </style>
+
+    <article x-data="{ scrollPos: 0, showProgressBar: true }" @scroll.window="scrollPos = window.scrollY; if (scrollPos > 0) { showProgressBar = true; } else { showProgressBar = false; }">
+		<!-- Progress Bar -->
+		<div x-show="showProgressBar" class="progress-container fixed top-0 left-0 w-full h-2 bg-transparent z-50">
+			<div class="progress-bar h-full bg-gradient-to-r from-blue-400 to-purple-600" :style="{ transform: 'scaleX(' + (scrollPos / (document.body.scrollHeight - window.innerHeight)) + ')' }"></div>
+		</div>
 		
 		<h1>DETTE ER EN TEST</h1>
 		<Button>Klik!</Button>
 		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
 		<Image src={thumbsup} alt=""></Image>
+		<h1>DETTE ER EN TEST</h1>
+		<Button>Klik!</Button>
+		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+		<Image src={thumbsup} alt=""></Image>
+		<h1>DETTE ER EN TEST</h1>
+		<Button>Klik!</Button>
+		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+		<Image src={thumbsup} alt=""></Image>
+		<h1>DETTE ER EN TEST</h1>
+		<Button>Klik!</Button>
+		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+		<Image src={thumbsup} alt=""></Image>
+		<h1>DETTE ER EN TEST</h1>
+		<Button>Klik!</Button>
+		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+		<Image src={thumbsup} alt=""></Image>
+		<h1>DETTE ER EN TEST</h1>
+		<Button>Klik!</Button>
+		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+		<Image src={thumbsup} alt=""></Image>
+		<h1>DETTE ER EN TEST</h1>
+		<Button>Klik!</Button>
+		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+		<Image src={thumbsup} alt=""></Image>
+		<h1>DETTE ER EN TEST</h1>
+		<Button>Klik!</Button>
+		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+		<Image src={thumbsup} alt=""></Image>
+		<h1>DETTE ER EN TEST</h1>
+		<Button>Klik!</Button>
+		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+		<Image src={thumbsup} alt=""></Image>
+		<h1>DETTE ER EN TEST</h1>
+		<Button>Klik!</Button>
+		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+		<Image src={thumbsup} alt=""></Image>
+		<h1>DETTE ER EN TEST</h1>
+		<Button>Klik!</Button>
+		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+		<Image src={thumbsup} alt=""></Image>
+		<h1>DETTE ER EN TEST</h1>
+		<Button>Klik!</Button>
+		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+		<Image src={thumbsup} alt=""></Image>
+		<h1>DETTE ER EN TEST</h1>
+		<Button>Klik!</Button>
+		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+		<Image src={thumbsup} alt=""></Image>
+		
 	</article>
 </MainLayout>
