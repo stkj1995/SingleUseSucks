@@ -29,7 +29,7 @@ h3 {
 
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(to right, #000000, #ffffff);
+  background: linear-gradient(to left, #585858, #ffffff);
   color: var(--dark-blue);
 }
 

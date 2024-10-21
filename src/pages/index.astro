@@ -6,7 +6,7 @@ import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 import "../styles/tobii.min.css"; 
 ---
-<MainLayout title="Single Use Sucks">
+<MainLayout title="Single Use Sucks Campaign">
 	<style>
         body {
             cursor: url('/src/assets/images/thumbsup.png'), auto;
@@ -71,6 +71,19 @@ import "../styles/tobii.min.css";
 		<Button>Klik!</Button>
 		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
 		<Image src={thumbsup} alt=""></Image>
-		
+
 	</article>
 </MainLayout>
+
+<script is:inline src="/tobii.min.js"></script>
+<script defer>
+	const tobii = new Tobii(); 
+</script>
+
+<script>
+    /* Import af Motion One biblioteket */
+    import { animate, stagger, scroll, inView as motionInView, timeline } from '@motionone/dom';
+    import type { TimelineSegment } from '@motionone/dom';
+
+
+</script>
