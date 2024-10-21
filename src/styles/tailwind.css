@@ -9,7 +9,7 @@
   /* Farvepalette */
   :root {
     --dark-blue: #003366;
-    --coral: #ff6f61;
+    --coral: #FF1054;
     --white: #ffffff;
     --light-gray: #fff;
     --button-bg: #4a90e2;
@@ -97,8 +97,7 @@ a:hover {
 }
 
 @layer components {
-  /* Eksempel på knapkomponent */
-  .btn {
-    @apply bg-button-bg text-white font-semibold py-2 px-4 rounded;
+    .btn {
+      @apply bg-button-bg text-white font-semibold py-2 px-4 rounded;
+    }
   }
-}
