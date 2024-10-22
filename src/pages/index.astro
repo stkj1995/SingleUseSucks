@@ -5,12 +5,20 @@ import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 import "../styles/tobii.min.css"; 
+import background from "../assets/images/background.png";
 ---
 
 <MainLayout title="Single Use Sucks Campaign">
-	<style>
+    <style>
         body {
             cursor: url('/src/assets/images/thumbsup.png'), auto;
+            background-image: url('/src/assets/images/background.png');
+            background-size: cover; /* Sørger for at baggrundsbilledet dækker hele skærmen */
+            background-position: center; /* Centrerer billedet */
+            background-repeat: no-repeat; /* Ingen gentagelse af billedet */
+            background-attachment: fixed; /* Giver en parallax-effekt, hvis ønskes */
+            /* background-color: var(--lightgreen-background); */ /* Fjernet baggrundsfarve */
+            color: var(--dark-gray); /* Tekst i mørk grå for kontrast */
         }
     </style>
 
