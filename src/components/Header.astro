@@ -2,8 +2,11 @@
 import Link from '../components/Link.astro';
 ---
 
-<nav x-data="{ isOpen: false }" class="w-full flex items-center justify-between p-4 bg-gray-800 fixed top-0 z-50">
-    <div class="text-white">Logo</div>
+<nav x-data="{ isOpen: false }" class="w-full flex items-center justify-between p-4 bg-white fixed top-0 z-50">
+    <div class="flex items-center">
+        <img src="/src/assets/images/image22.png" alt="Logo" class="h-12 w-auto">
+    </div>
+    
     <div class="block md:hidden">
         <button 
             @click="isOpen = !isOpen" 
