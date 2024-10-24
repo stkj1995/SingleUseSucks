@@ -20,7 +20,7 @@
   }
   
   body {
-    background-color: var(--light-blue); /* Lyseblå baggrundsfarve */
+    background: linear-gradient(to bottom, var(--light-blue), var(--dark-blue)); /* Gradient fra lys blå til mørkeblå */
     color: var(--dark-blue); /* Mørkeblå tekst for kontrast */
     font-family: 'Poppins', sans-serif; /* Brug Poppins som skrifttype */
     margin: 0;
@@ -31,7 +31,7 @@
     background-repeat: no-repeat; /* Ingen gentagelse af billedet */
     background-attachment: fixed; /* Giver en parallax-effekt, hvis ønskes */
     color: var(--dark-blue); /* Mørk blå farve for tekst */
-  }
+}
 
   .container {
     margin: 0 10px !important;
