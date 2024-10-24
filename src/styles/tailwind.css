@@ -88,22 +88,25 @@
     color: var(--white); /* Hvid tekst ved hover for kontrast */
   }
 
-  /* Progress bar styles */
-  .progress-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 10px; /* Tilpasset for at matche din højde */
-    background-color: transparent; /* For at vise baggrundsfargen korrekt */
-  }
+/* Progress bar styles */
+.progress-container {
+  position: fixed; /* Holder den fast i venstre side */
+  top: 0; /* Starter fra toppen */
+  left: 0; /* Venstre position */
+  width: 10px; /* Bredde af progress baren */
+  height: 100%; /* Dækker hele højden af skærmen */
+  background-color: transparent; /* For at vise baggrundsfargen korrekt */
+  z-index: 1000; /* Sørger for at progress bar er ovenpå andre elementer */
+}
 
-  .progress-bar {
-    height: 100%;
-    background: linear-gradient(to right, #4caf50, #2196F3); /* Gradient farver */
-    transform-origin: left;
-    transition: transform 0.25s ease;
-  }
+.progress-bar {
+  width: 100%; /* Dækker hele bredden af containeren */
+  background: linear-gradient(to bottom, #4caf50, #2196F3); /* Gradient fra top til bund */
+  transform-origin: bottom; /* Animering fra bunden */
+  transition: height 0.25s ease; /* Animering ved ændring af højden */
+}
+
+
 
   /* Flip animation */
  
