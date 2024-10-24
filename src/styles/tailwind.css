@@ -45,44 +45,35 @@ h2 {
   color: var(--dark-blue); /* Mørk blå farve */
   font-size: 18px; /* Valgfri skriftstørrelse */
   line-height: 1.5; /* Valgfri linjehøjde */
+  margin-bottom: 20px; /* Margin under teksten */
 }
 
 a {
-  color: var(--link-color); /* Teal til links */
+  color: var(--dark-blue); /* Mørkeblå til links */
+  text-decoration: none; /* Ingen understregning */
+  transition: color 0.3s; /* Blød overgang for hover-effekt */
 }
 
 a:hover {
-  color: var(--link-hover-color); /* Mørkere teal til hover */
+  color: var(--orange); /* Orange til hover */
 }
 
 .button {
-  background-color: var(--button-bg); /* Orange til knapper */
-  color: var(--dark-blue); /* Hvid tekst på knapper */
+  background-color: var(--orange); /* Orange til knapper */
+  color: var(--dark-blue); /* Mørkeblå tekst på knapper */
+  border: none; /* Ingen kant */
+  border-radius: 15px; /* Rundede hjørner */
+  padding: 10px 20px; /* Indre afstand */
+  font-size: 16px; /* Fontstørrelse */
+  cursor: pointer; /* Cursor ændres til hånd */
+  transition: background-color 0.3s, color 0.3s; /* Blød overgang for hover-effekt */
+  display: inline-block; /* Gør knappen til en inline-block */
+  margin-top: 10px; /* Margin over knappen */
 }
 
 .button:hover {
   background-color: var(--button-hover-bg); /* Mørkere orange til hover */
-}
-
-/* Button styling */
-button {
-  background-color: var(--button-bg);
-  color: var(--white);
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: var(--button-hover-bg);
-}
-
-/* Link styling */
-a {
-  color: var(--link-color);
-  text-decoration: underline;
-}
-
-a:hover {
-  color: var(--link-hover-color);
+  color: var(--white); /* Hvid tekst ved hover for kontrast */
 }
 
 /* Custom cursor */
