@@ -34,7 +34,7 @@
 }
 
   .container {
-    margin: 0 10px !important;
+    margin: 0 20px !important;
     max-width: 100%; /* Containeren fylder hele bredden på små skærme */
     margin-left: auto; /* Centrerer containeren */
     margin-right: auto; /* Centrerer containeren */
@@ -117,7 +117,7 @@
 /* Større skærme styling */
 @media (min-width: 640px) {
   .container {
-    margin: 0 20px !important; /* Mere margin til større skærme */
+    margin: 0 40px !important; /* Mere margin til større skærme */
     max-width: 1200px; /* Sætter en maksimal bredde for containeren */
   }
 
