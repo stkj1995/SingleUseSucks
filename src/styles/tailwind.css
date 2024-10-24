@@ -6,40 +6,44 @@
 @tailwind utilities;
 
 @layer base {
+
   /* Farvepalette */
-  :root {
-    /* Primære farver */
-    --teal: #008080; /* Blågrøn - symboliserer hav og bæredygtighed */
-    --deep-blue: #002B5C; /* Dybhavsblå - symboliserer plastikforureningens problem */
-    --light-green: #c0e0d5; /* Lys Grøn - miljøboost og positiv forandring */
+:root {
+  /* Primære farver */
+  --dark-blue: #013755; /* Mørkeblå */
+  --light-blue: #E6F6FF; /* Lyseblå */
+  --white: #FFFFFF; /* Hvid */
+  --orange: #FF6F3C; /* Orange */
 
-    /* Sekundære farver */
-    --dark-gray: #4A4A4A; /* Mørk Grå - til tekst og kontrast */
-    --white: #FFFFFF; /* Hvid - enkelhed og rum */
-    
-    /* Accentfarve */
-    --orange-accent: #FF6F3C; /* Orange - energi og handlekraft (CTA'er) */
-
-    /* Yderligere brugsspecifikke variabler */
-    --button-bg: var(--orange-accent); /* Brug orange til CTA knapper */
-    --button-hover-bg: #D95B30; /* En mørkere nuance af orange til hover-effekt */
-    --link-color: var(--teal); /* Brug blågrøn til links */
-    --link-hover-color: #006666; /* En mørkere teal til hover-effekt */
-  }
+  /* Yderligere brugsspecifikke variabler */
+  --button-bg: var(--orange); /* Brug orange til CTA knapper */
+  --button-hover-bg: #D95B30; /* En mørkere nuance af orange til hover-effekt */
 }
 
 body {
-  background-color: var(--lightgreen-background); /* Lysgrøn baggrundsfarve */
-  color: var(--dark-gray); /* Tekst i mørk grå for kontrast */
+  background-color: var(--light-blue); /* Lyseblå baggrundsfarve */
+  color: var(--dark-blue); /* Mørkeblå tekst for kontrast */
+  font-family: 'Poppins', sans-serif; /* Brug Poppins som skrifttype */
+  margin: 0; /* Fjern standard margin */
+  padding: 0; /* Fjern standard padding */
 }
 
-h1, h2 {
-  color: var(--teal); /* Teal til overskrifter */
+h1 {
+  color: var(--orange); /* Orange til overskrifter */
+  font-family: 'Playfair Display', serif; /* Brug Playfair Display til overskrifter */
+  font-size: 50px; /* Større fontstørrelse for h1 */
+  margin-bottom: 20px; /* Margin under overskriften */
+}
+
+h2 {
+  color: var(--white); /* Hvid til underoverskrifter */
+  font-size: 30px; /* Mindre størrelse for h2 */
+  margin-bottom: 15px; /* Margin under h2 */
 }
 
 .text {
-  color: var(--dark-gray); /* Mørk grå farve */
-  font-size: 16px; /* Valgfri skriftstørrelse */
+  color: var(--dark-blue); /* Mørk blå farve */
+  font-size: 18px; /* Valgfri skriftstørrelse */
   line-height: 1.5; /* Valgfri linjehøjde */
 }
 
@@ -53,7 +57,7 @@ a:hover {
 
 .button {
   background-color: var(--button-bg); /* Orange til knapper */
-  color: var(--white); /* Hvid tekst på knapper */
+  color: var(--dark-blue); /* Hvid tekst på knapper */
 }
 
 .button:hover {
@@ -123,3 +127,4 @@ a:hover {
       @apply bg-button-bg text-white font-semibold py-2 px-4 rounded;
     }
   }
+}
