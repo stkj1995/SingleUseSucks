@@ -6,83 +6,90 @@
 @tailwind utilities;
 
 @layer base {
-
   /* Farvepalette */
-:root {
-  /* Primære farver */
-  --dark-blue: #013755; /* Mørkeblå */
-  --light-blue: #E6F6FF; /* Lyseblå */
-  --white: #FFFFFF; /* Hvid */
-  --orange: #FF6F3C; /* Orange */
+  :root {
+    /* Primære farver */
+    --dark-blue: #013755; /* Mørkeblå */
+    --light-blue: #E6F6FF; /* Lyseblå */
+    --white: #FFFFFF; /* Hvid */
+    --orange: #FF6F3C; /* Orange */
+  
+    /* Yderligere brugsspecifikke variabler */
+    --button-bg: var(--orange); /* Brug orange til CTA knapper */
+    --button-hover-bg: #D95B30; /* En mørkere nuance af orange til hover-effekt */
+  }
+  
+  body {
+    background-color: var(--light-blue); /* Lyseblå baggrundsfarve */
+    color: var(--dark-blue); /* Mørkeblå tekst for kontrast */
+    font-family: 'Poppins', sans-serif; /* Brug Poppins som skrifttype */
+    margin: 0;
+    padding: 0; 
+    cursor: url('/src/assets/images/icons8-seahorse-48.png'), auto;
+    background-size: cover; /* Sørger for at baggrundsbilledet dækker hele skærmen */
+    background-position: center; /* Centrerer billedet */
+    background-repeat: no-repeat; /* Ingen gentagelse af billedet */
+    background-attachment: fixed; /* Giver en parallax-effekt, hvis ønskes */
+    color: var(--dark-blue); /* Mørk blå farve for tekst */
+  }
 
-  /* Yderligere brugsspecifikke variabler */
-  --button-bg: var(--orange); /* Brug orange til CTA knapper */
-  --button-hover-bg: #D95B30; /* En mørkere nuance af orange til hover-effekt */
-}
+  .container {
+    margin: 0 10px !important;
+    max-width: 100%; /* Containeren fylder hele bredden på små skærme */
+    margin-left: auto; /* Centrerer containeren */
+    margin-right: auto; /* Centrerer containeren */
+  }
 
-body {
-  background-color: var(--light-blue); /* Lyseblå baggrundsfarve */
-  color: var(--dark-blue); /* Mørkeblå tekst for kontrast */
-  font-family: 'Poppins', sans-serif; /* Brug Poppins som skrifttype */
-  margin: 0; /* Fjern standard margin */
-  padding: 0; /* Fjern standard padding */
-}
+  h1 {
+    color: var(--orange); /* Orange til overskrifter */
+    font-family: 'Playfair Display', serif; /* Brug Playfair Display til overskrifter */
+    font-size: 30px; /* Større fontstørrelse for h1 */
+    margin-bottom: 20px; /* Margin under overskriften */
+  }
 
-h1 {
-  color: var(--orange); /* Orange til overskrifter */
-  font-family: 'Playfair Display', serif; /* Brug Playfair Display til overskrifter */
-  font-size: 50px; /* Større fontstørrelse for h1 */
-  margin-bottom: 20px; /* Margin under overskriften */
-}
+  h2 {
+    color: var(--white); /* Hvid til underoverskrifter */
+    font-size: 20px; /* Mindre størrelse for h2 */
+    margin-bottom: 15px; /* Margin under h2 */
+  }
 
-h2 {
-  color: var(--white); /* Hvid til underoverskrifter */
-  font-size: 30px; /* Mindre størrelse for h2 */
-  margin-bottom: 15px; /* Margin under h2 */
-}
+  .text {
+    color: var(--dark-blue); /* Mørk blå farve */
+    font-size: 16px; /* Valgfri skriftstørrelse */
+    line-height: 1.5; /* Valgfri linjehøjde */
+    margin-bottom: 20px; /* Margin under teksten */
+  }
 
-.text {
-  color: var(--dark-blue); /* Mørk blå farve */
-  font-size: 18px; /* Valgfri skriftstørrelse */
-  line-height: 1.5; /* Valgfri linjehøjde */
-  margin-bottom: 20px; /* Margin under teksten */
-}
+  a {
+    color: var(--dark-blue); /* Mørkeblå til links */
+    text-decoration: none; /* Ingen understregning */
+    transition: color 0.3s; /* Blød overgang for hover-effekt */
+  }
 
-a {
-  color: var(--dark-blue); /* Mørkeblå til links */
-  text-decoration: none; /* Ingen understregning */
-  transition: color 0.3s; /* Blød overgang for hover-effekt */
-}
+  a:hover {
+    color: var(--orange); /* Orange til hover */
+  }
 
-a:hover {
-  color: var(--orange); /* Orange til hover */
-}
+  .button {
+    background-color: var(--orange); /* Orange til knapper */
+    color: var(--dark-blue); /* Mørkeblå tekst på knapper */
+    border: none; /* Ingen kant */
+    border-radius: 15px; /* Rundede hjørner */
+    padding: 10px 20px; /* Indre afstand */
+    font-size: 14px; /* Mindre fontstørrelse til mobil */
+    cursor: pointer; /* Cursor ændres til hånd */
+    transition: background-color 0.3s, color 0.3s; /* Blød overgang for hover-effekt */
+    display: inline-block; /* Gør knappen til en inline-block */
+    margin-top: 10px; /* Margin over knappen */
+  }
 
-.button {
-  background-color: var(--orange); /* Orange til knapper */
-  color: var(--dark-blue); /* Mørkeblå tekst på knapper */
-  border: none; /* Ingen kant */
-  border-radius: 15px; /* Rundede hjørner */
-  padding: 10px 20px; /* Indre afstand */
-  font-size: 16px; /* Fontstørrelse */
-  cursor: pointer; /* Cursor ændres til hånd */
-  transition: background-color 0.3s, color 0.3s; /* Blød overgang for hover-effekt */
-  display: inline-block; /* Gør knappen til en inline-block */
-  margin-top: 10px; /* Margin over knappen */
-}
+  .button:hover {
+    background-color: var(--button-hover-bg); /* Mørkere orange til hover */
+    color: var(--white); /* Hvid tekst ved hover for kontrast */
+  }
 
-.button:hover {
-  background-color: var(--button-hover-bg); /* Mørkere orange til hover */
-  color: var(--white); /* Hvid tekst ved hover for kontrast */
-}
-
-/* Custom cursor */
-.custom-cursor {
-  cursor: url("../assets/images/custom-cursor.png"), auto;
-}
-
-/* Progress bar styles */
-.progress-container {
+  /* Progress bar styles */
+  .progress-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -90,32 +97,43 @@ a:hover {
     height: 10px; /* Tilpasset for at matche din højde */
     background-color: transparent; /* For at vise baggrundsfargen korrekt */
   }
-  
+
   .progress-bar {
     height: 100%;
     background: linear-gradient(to right, #4caf50, #2196F3); /* Gradient farver */
     transform-origin: left;
     transition: transform 0.25s ease;
   }
-  
-/* Flip animation */
 
-/* Border animation */
+  /* Flip animation */
+ 
 
-/* Keyframes */
 
-/*:hover video*/
-#videoonhover video {
-  transform: scale(1);
 }
 
-#videoonhover video:hover {
-  transform: scale(1.15); /* Tilføj zoom-effekt ved hover */
-}
+/* Større skærme styling */
+@media (min-width: 640px) {
+  .container {
+    margin: 0 20px !important; /* Mere margin til større skærme */
+    max-width: 1200px; /* Sætter en maksimal bredde for containeren */
+  }
 
-@layer components {
-    .btn {
-      @apply bg-button-bg text-white font-semibold py-2 px-4 rounded;
-    }
+  h1 {
+    font-size: 50px; /* Større fontstørrelse for h1 på større skærme */
+  }
+
+  h2 {
+    font-size: 30px; /* Større fontstørrelse for h2 */
+  }
+
+  .text {
+    font-size: 18px; /* Større fontstørrelse for tekst */
+  }
+
+  .button {
+    font-size: 16px; /* Større fontstørrelse til knapper */
   }
 }
+
+/* Keyframes til animationer */
+
