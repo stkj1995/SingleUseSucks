@@ -1,9 +1,10 @@
 ---
+import Button from './Button.astro';
 import Link from '../components/Link.astro';
 import { animate } from 'motion';
 ---
 
-<nav x-data="{ isOpen: false }" class="w-full flex items-center justify-between p-4  top-0 z-50">
+<nav x-data="{ isOpen: false }" class="w-full flex items-center justify-between p-4  top-0 z-50 mb-10">
     <header x-data="{ bobble: false }" x-init="bobble = true" class="w-full flex justify-left items-start py-4">
         <img 
             src="/logo.png" 
@@ -48,6 +49,10 @@ import { animate } from 'motion';
     </h2>
     <p class="text-lg md:text-xl">Eksempel på header</p>
 </section>
+
+<div class="flex-grow fixed right-8 bottom-8">
+    <Button>Bidrag nu!</Button>
+</div>
 
 <script>
     import { animate, scroll, inView } from '@motionone/dom';
