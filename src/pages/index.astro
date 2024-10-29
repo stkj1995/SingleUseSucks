@@ -23,23 +23,23 @@ import Footer from "../components/Footer.astro";
         <article x-data="{ scrollPos: 0, showProgressBar: true }" 
                  @scroll.window="scrollPos = window.scrollY; showProgressBar = scrollPos > 0;">
                  
-                    <!-- Progress Bar -->
-                <div x-show="showProgressBar" class="progress-container fixed top-0 left-0 w-2 h-full bg-transparent z-50">
-                    <div class="progress-bar" :style="{ height: (scrollPos / (document.body.scrollHeight - window.innerHeight) * 100) + '%' }"></div>
-                    <div class="progress-points">
-                        <div class="progress-point" title="Header"></div>
-                        <div class="progress-point" title="Plastikforurening"></div>
-                        <div class="progress-point" title="Problemet"></div>
-                        <div class="progress-point" title="Skildpadde"></div>
-                        <div class="progress-point" title="Horisontal"></div>
-                        <div class="progress-point" title="Forskel"></div>
-                        <div class="progress-point" title="Formular"></div>
-                        <div class="progress-point" title="Merchandise"></div>
-                        <div class="progress-point" title="Footer"></div>
-                    </div>
-                </div>
-             
-            <!-- Indhold -->
+        <!-- Progress Bar -->
+        <div x-show="showProgressBar" class="progress-container fixed top-0 left-0 w-2 h-full bg-transparent z-50" style="left: 20px;">
+            <div class="progress-points">
+                <div class="progress-point" title="Header"></div>
+                <div class="progress-point" title="Plastikforurening"></div>
+                <div class="progress-point" title="Problemet"></div>
+                <div class="progress-point" title="Skildpadde"></div>
+                <div class="progress-point" title="Horisontal"></div>
+                <div class="progress-point" title="Forskel"></div>
+                <div class="progress-point" title="Formular"></div>
+                <div class="progress-point" title="Merchandise"></div>
+                <div class="progress-point" title="Footer"></div>
+            </div>
+            <div class="progress-bar" :style="{ height: (scrollPos / (document.body.scrollHeight - window.innerHeight) * 100) + '%' }"></div> 
+        </div>
+
+         <!-- Indhold -->
             <Button class="mb-4">Klik!</Button>
                   
             <p class="text-sm md:text-base space-y-4">Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
@@ -60,6 +60,7 @@ import Footer from "../components/Footer.astro";
     
 
 </MainLayout>
+
 
 <script src="https://cdn.jsdelivr.net/npm/alpinejs" defer></script>
 

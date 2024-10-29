@@ -88,47 +88,53 @@
     color: var(--white); /* Hvid tekst ved hover for kontrast */
   }
 
-/* Progress bar styles */
-/* Progress bar styles */
-.progress-container {
-  position: fixed; /* Holder den fast i venstre side */
-  top: 0; /* Starter fra toppen */
-  left: 0; /* Venstre position */
-  width: 10px; /* Bredde af progress baren */
-  height: 100%; /* Dækker hele højden af skærmen */
-  background-color: transparent; /* For at vise baggrundsfargen korrekt */
-  z-index: 1000; /* Sørger for at progress bar er ovenpå andre elementer */
-}
 
-.progress-bar {
-  width: 100%; /* Dækker hele bredden af containeren */
-  background: white; /* Hvid baggrund for progress baren */
-  transform-origin: bottom; /* Animering fra bunden */
-  transition: height 0.25s ease; /* Animering ved ændring af højden */
-}
-
-.progress-points {
-  position: absolute;
-  top: 0; /* Start ved toppen */
-  left: 100%; /* Placér punkterne til højre for progress baren */
-  width: 20px; /* Bredde for at give plads til punkterne */
-  height: 100%; /* Dækker hele højden */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Fordel punkterne jævnt */
-}
-
+/* Fælles stilarter for punkter */
 .progress-point {
   width: 20px; /* Bredde af punkterne */
   height: 20px; /* Højde af punkterne */
   background-color: white; /* Hvid farve */
   border-radius: 50%; /* Gør dem runde */
   transition: background-color 0.3s ease; /* Animering af baggrundsfarven */
+  z-index: 1000; /* Sørger for at punkterne er ovenpå andre elementer */
 }
 
-/* Hover-effekt for punkter */
 .progress-point:hover {
   background-color: var(--orange); /* Bliver orange ved hover */
+}
+
+/* Progress bar styles */
+.progress-container {
+  position: sticky; /* Holder den fast i venstre side */
+  top: 0; /* Starter fra toppen */
+  left: 20; /* Venstre position */
+  width: 10px; /* Bredde af progress baren */
+  height: 80%; /* Dækker hele højden af skærmen */
+  background-color: transparent; /* For at vise baggrundsfargen korrekt */
+  z-index: 1000; /* Sørger for at progress bar er ovenpå andre elementer */
+}
+
+.progress-bar {
+  background: white; /* Hvid baggrund for progress baren */
+  transform-origin: bottom; /* Animering fra bunden */
+  transition: height 0.25s ease; /* Animering ved ændring af højden */
+  position: absolute;
+  left: 10px; /* For at centrere linjen under punkterne */
+  width: 2px; /* Bredde af den hvide streg */
+  height: 0; /* Initial højde */
+  transition: height 0.25s ease; /* Animering ved ændring af højden */
+}
+
+.progress-points {
+  position: absolute;
+  top: 0; /* Start ved toppen */
+  left: 0; /* Placér punkterne til venstre for progress baren */
+  width: 40px; /* Bredde for at give plads til punkterne */
+  height: 80%; /* Dækker hele højden */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Fordel punkterne jævnt */
+  z-index: 1000; /* Sørger for at punkterne er ovenpå andre elementer */
 }
 
   /* Flip animation */
