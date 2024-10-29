@@ -1,3 +1,10 @@
 {
-  "extends": "astro/tsconfigs/base"
+  "extends": "astro/tsconfigs/base",
+  "compilerOptions": {
+    "strict": true, // Aktiverer strenge type-checking
+    "jsx": "preserve", // Beholder JSX i output
+    "moduleResolution": "node" // Bruger Node.js modulopløsning
+  },
+  "include": ["src/**/*"], // Inkluderer filer i src-mappen
+  "exclude": ["node_modules"] // Udelukker node_modules-mappen
 }
