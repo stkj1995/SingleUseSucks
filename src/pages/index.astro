@@ -17,7 +17,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<MainLayout title="Single Use Sucks Campaign">
+<MainLayout title="Single Use Sucks">
 
 <div class="container">
     <article x-data="{ scrollPos: 0, showProgressBar: true }" 
@@ -33,9 +33,9 @@ import Footer from "../components/Footer.astro";
     <p class="text-sm md:text-base space-y-4">Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
     <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
     <Image src={thumbsup} alt="" class="w-full max-w-sm mx-auto mb-4"></Image>
-	
-</article>
+    </article>
 </div>
+
 </MainLayout>
 
 <script src="https://cdn.jsdelivr.net/npm/alpinejs" defer></script>
@@ -49,6 +49,4 @@ import Footer from "../components/Footer.astro";
     /* Import af Motion One biblioteket */
     import { animate, stagger, scroll, inView as motionInView, timeline } from '@motionone/dom';
     import type { TimelineSegment } from '@motionone/dom';
-
-
 </script>
