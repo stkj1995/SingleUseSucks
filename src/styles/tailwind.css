@@ -127,15 +127,16 @@
 
 .progress-points {
   position: absolute;
-  top: 0; /* Start ved toppen */
+  top: 80px; /* Juster startpositionen så den matcher den ønskede top-position */
   left: 0; /* Placér punkterne til venstre for progress baren */
   width: 40px; /* Bredde for at give plads til punkterne */
-  height: 80%; /* Dækker hele højden */
+  height: calc(80% - 0px); /* Dækker hele højden minus startpositionen */
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Fordel punkterne jævnt */
   z-index: 1000; /* Sørger for at punkterne er ovenpå andre elementer */
 }
+
 
   /* Flip animation */
 
