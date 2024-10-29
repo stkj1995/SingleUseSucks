@@ -141,10 +141,11 @@
 
 .progress-label {
   margin-left: 10px; /* Afstand mellem punktet og teksten */
-  color: var(--dark-blue); /* Farve på teksten */
-  font-size: 10px; /* Juster skrifttypestørrelse efter behov */
+  color: var(--light-blue); /* Farve på teksten */
+  font-size: 15px; /* Juster skrifttypestørrelse efter behov */
   opacity: 0; /* Skjul teksten som standard */
   transition: opacity 0.3s; /* Overgangseffekt for at vise teksten */
+  font-weight: bold; /* Gør teksten fed */
 }
 
 .progress-point:hover .progress-label {
