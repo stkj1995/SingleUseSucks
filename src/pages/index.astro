@@ -6,7 +6,7 @@ import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 import "../styles/tobii.min.css"; 
 import { animate } from 'motion';
-import Forbruger from "../components/Forbruger.astro";
+import Forbruger from "../components/Horisontal.astro";
 import Formular from "../components/Formular.astro";
 import Forskel from "../components/Forskel.astro";
 import Problemet from "../components/Problemet.astro";
@@ -19,24 +19,106 @@ import Footer from "../components/Footer.astro";
 
 <MainLayout title="Single Use Sucks">
 
-<div class="container">
-    <article x-data="{ scrollPos: 0, showProgressBar: true }" 
-         @scroll.window="scrollPos = window.scrollY; showProgressBar = scrollPos > 0;">
-    <!-- Progress Bar -->
-    <div x-show="showProgressBar" class="progress-container fixed top-0 left-0 w-2 h-full bg-transparent z-50">
-        <div class="progress-bar w-full" :style="{ height: (scrollPos / (document.body.scrollHeight - window.innerHeight) * 100) + '%' }"></div>
+    <div class="container">
+        <article x-data="{ scrollPos: 0, showProgressBar: true }" 
+                 @scroll.window="scrollPos = window.scrollY; showProgressBar = scrollPos > 0;">
+                 
+        <!-- Progress Bar -->
+        <div x-show="showProgressBar" class="progress-container fixed top-0 left-0 w-2 max-h-[80vh] bg-transparent z-50" style="left: 20px;">
+            <div class="progress-points">
+                <a href="#header" class="progress-point" title="Header">
+                    <span class="progress-label">#SingleUseSucks</span>
+                </a>
+                <a href="#plastikforurening" class="progress-point" title="Plastikforurening">
+                    <span class="progress-label">Hvad er plastikforurening?</span>
+                </a>
+                <a href="#problemet" class="progress-point" title="Problemet">
+                    <span class="progress-label">Problemet med plastikforurening</span>
+                </a>
+                <a href="#skildpadde" class="progress-point" title="Skildpadde">
+                    <span class="progress-label">Konsekvensen</span>
+                </a>
+                <a href="#horisontal" class="progress-point" title="Horisontal">
+                    <span class="progress-label">Hvordan kan du bidrage?</span>
+                </a>
+                <a href="#forskel" class="progress-point" title="Forskel">
+                    <span class="progress-label">Sådan gør vi en forskel</span>
+                </a>
+                <a href="#formular" class="progress-point" title="Formular">
+                    <span class="progress-label">Bidrag nu!</span>
+                </a>
+                <a href="#merchandise" class="progress-point" title="Merchandise">
+                    <span class="progress-label">Køb merchandise</span>
+                </a>
+                <a href="#footer" class="progress-point" title="Footer">
+                    <span class="progress-label">Tilmeld nyhedsbrev</span>
+                </a>
+            </div>
+            <div class="progress-bar" :style="{ height: Math.min((scrollPos / (document.body.scrollHeight - window.innerHeight) * 100), 80) + '%', top: '80px' }"></div>
+        </div>
+
+         <!-- Indhold -->
+            <Button class="mb-4">Klik!</Button>
+                  
+            <p class="text-sm md:text-base space-y-4">Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+                      
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+            
+        </article>
     </div>
- 	
-    <!-- Indhold -->
-    <h1 class="text-2xl md:text-3xl lg:text-4xl mt-52">DETTE ER EN TEST</h1>
-    <Button class="mb-4">Klik!</Button>
-    <p class="text-sm md:text-base space-y-4">Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-    <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-    <Image src={thumbsup} alt="" class="w-full max-w-sm mx-auto mb-4"></Image>
-    </article>
-</div>
+    
 
 </MainLayout>
+
 
 <script src="https://cdn.jsdelivr.net/npm/alpinejs" defer></script>
 
