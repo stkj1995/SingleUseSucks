@@ -100,7 +100,8 @@
 }
 
 .progress-point:hover {
-  background-color: var(--orange); /* Bliver orange ved hover */
+  background-color: var(--orange); /* Mørkere farve ved hover */
+  transform: scale(1.2); /* Størrelsesændring ved hover */
 }
 
 /* Progress bar styles */

@@ -23,22 +23,40 @@ import Footer from "../components/Footer.astro";
         <article x-data="{ scrollPos: 0, showProgressBar: true }" 
                  @scroll.window="scrollPos = window.scrollY; showProgressBar = scrollPos > 0;">
                  
-        <!-- Progress Bar -->
-        <div x-show="showProgressBar" class="progress-container fixed top-0 left-0 w-2 max-h-[80vh] bg-transparent z-50" style="left: 20px;">
-            <div class="progress-points">
-                <div class="progress-point" title="Header"></div>
-                <div class="progress-point" title="Plastikforurening"></div>
-                <div class="progress-point" title="Problemet"></div>
-                <div class="progress-point" title="Skildpadde"></div>
-                <div class="progress-point" title="Horisontal"></div>
-                <div class="progress-point" title="Forskel"></div>
-                <div class="progress-point" title="Formular"></div>
-                <div class="progress-point" title="Merchandise"></div>
-                <div class="progress-point" title="Footer"></div>
-            </div>
-            <div class="progress-bar" :style="{ height: Math.min((scrollPos / (document.body.scrollHeight - window.innerHeight) * 100), 80) + '%', top: '80px' }"></div> <!-- Juster top-værdien for at flytte baren ned -->
-        </div>
-    
+<!-- Progress Bar -->
+<div x-show="showProgressBar" class="progress-container fixed top-0 left-0 w-2 max-h-[80vh] bg-transparent z-50" style="left: 20px;">
+    <div class="progress-points">
+        <a href="#header" class="progress-point" title="Header">
+            <!-- <span class="progress-label">Menu</span> -->
+        </a>
+        <a href="#plastikforurening" class="progress-point" title="Plastikforurening">
+            <!-- <span class="progress-label">Plastikforurening</span> -->
+        </a>
+        <a href="#problemet" class="progress-point" title="Problemet">
+            <!-- <span class="progress-label">Problemet</span> -->
+        </a>
+        <a href="#skildpadde" class="progress-point" title="Skildpadde">
+            <!-- <span class="progress-label">Skildpadde</span> -->
+        </a>
+        <a href="#horisontal" class="progress-point" title="Horisontal">
+            <!-- <span class="progress-label">Forbruger</span> -->
+        </a>
+        <a href="#forskel" class="progress-point" title="Forskel">
+            <!-- <span class="progress-label">Forskel</span> -->
+        </a>
+        <a href="#formular" class="progress-point" title="Formular">
+            <!-- <span class="progress-label">Bidrag</span> -->
+        </a>
+        <a href="#merchandise" class="progress-point" title="Merchandise">
+            <!-- <span class="progress-label">Merchandise</span> -->
+        </a>
+        <a href="#footer" class="progress-point" title="Footer">
+            <!-- <span class="progress-label">Nyhedsbrev</span> -->
+        </a>
+    </div>
+    <div class="progress-bar" :style="{ height: Math.min((scrollPos / (document.body.scrollHeight - window.innerHeight) * 100), 80) + '%', top: '80px' }"></div>
+</div>
+
          <!-- Indhold -->
             <Button class="mb-4">Klik!</Button>
                   
