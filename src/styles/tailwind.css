@@ -89,6 +89,7 @@
   }
 
 /* Progress bar styles */
+/* Progress bar styles */
 .progress-container {
   position: fixed; /* Holder den fast i venstre side */
   top: 0; /* Starter fra toppen */
@@ -101,15 +102,36 @@
 
 .progress-bar {
   width: 100%; /* Dækker hele bredden af containeren */
-  background: linear-gradient(to bottom, #4caf50, #2196F3); /* Gradient fra top til bund */
+  background: white; /* Hvid baggrund for progress baren */
   transform-origin: bottom; /* Animering fra bunden */
   transition: height 0.25s ease; /* Animering ved ændring af højden */
 }
 
+.progress-points {
+  position: absolute;
+  top: 0; /* Start ved toppen */
+  left: 100%; /* Placér punkterne til højre for progress baren */
+  width: 20px; /* Bredde for at give plads til punkterne */
+  height: 100%; /* Dækker hele højden */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Fordel punkterne jævnt */
+}
 
+.progress-point {
+  width: 20px; /* Bredde af punkterne */
+  height: 20px; /* Højde af punkterne */
+  background-color: white; /* Hvid farve */
+  border-radius: 50%; /* Gør dem runde */
+  transition: background-color 0.3s ease; /* Animering af baggrundsfarven */
+}
+
+/* Hover-effekt for punkter */
+.progress-point:hover {
+  background-color: var(--orange); /* Bliver orange ved hover */
+}
 
   /* Flip animation */
- 
 
 
 }
