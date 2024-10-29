@@ -15,6 +15,7 @@ import Skildpadde from "../components/Skildpadde.astro";
 import Plastikforurening from "../components/Plastikforurening.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Horisontal from "../components/Horisontal.astro";
 ---
 
 <MainLayout title="Single Use Sucks">
@@ -57,68 +58,49 @@ import Footer from "../components/Footer.astro";
             <div class="progress-bar" :style="{ height: Math.min((scrollPos / (document.body.scrollHeight - window.innerHeight) * 100), 80) + '%', top: '80px' }"></div>
         </div>
 
-         <!-- Indhold -->
-            <Button class="mb-4">Klik!</Button>
+         <!-- Komponenter med indhold -->
+    
+         <Plastikforurening></Plastikforurening>
+         <Problemet></Problemet>
+         <Skildpadde></Skildpadde>
+         <Horisontal></Horisontal>
+         <Forskel></Forskel>
+         <Formular></Formular>
+         <Merchandise></Merchandise>
+        
+            
+         
+         <p class="text">Dette er en test</p>
+         <p class="text">Dette er en test</p>
+         <p class="text">Dette er en test</p>
+         <p class="text">Dette er en test</p>
+         <p class="text">Dette er en test</p>
+         <p class="text">Dette er en test</p>
+         <p class="text">Dette er en test</p>
+         <p class="text">Dette er en test</p>
+         <p class="text">Dette er en test</p>
+         <p class="text">Dette er en test</p>
+         <p class="text">Dette er en test</p>
+         <p class="text">Dette er en test</p>
+         <p class="text">Dette er en test</p>
+         <p class="text">Dette er en test</p>
+         <p class="text">Dette er en test</p>
+         <p class="text">Dette er en test</p>
+         <p class="text">Dette er en test</p>
+         <p class="text">Dette er en test</p>
+         <p class="text">Dette er en test</p>
+         <p class="text">Dette er en test</p>
+         <p class="text">Dette er en test</p>
+
+         <Button class="mb-4">Klik!</Button>
+         <Button class="mb-4">Klik!</Button>
+         <Button class="mb-4">Klik!</Button>
                   
-            <p class="text-sm md:text-base space-y-4">Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-                      
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
-            <p class="text">Dette er en brødtekst, som bruger den mørke grå farve.</p>
+        <p class="text-sm md:text-base space-y-4">Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>      
             
         </article>
     </div>
-    
-
 </MainLayout>
-
 
 <script src="https://cdn.jsdelivr.net/npm/alpinejs" defer></script>
 
