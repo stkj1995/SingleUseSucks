@@ -107,7 +107,7 @@
 .progress-container {
   position: sticky; /* Holder den fast i venstre side */
   top: 0; /* Starter fra toppen */
-  left: 20; /* Venstre position */
+  left: 20px; /* Venstre position */
   width: 10px; /* Bredde af progress baren */
   height: 80%; /* Dækker hele højden af skærmen */
   background-color: transparent; /* For at vise baggrundsfargen korrekt */
@@ -136,6 +136,7 @@
   justify-content: space-between; /* Fordel punkterne jævnt */
   z-index: 1000; /* Sørger for at punkterne er ovenpå andre elementer */
 }
+
 
 
   /* Flip animation */
