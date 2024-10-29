@@ -11,28 +11,28 @@ import { animate } from 'motion';
     <section id="Overskrift og brødtekst" class="flex flex-col md:flex-row gap-10 my-10">
         <!-- Overskrift -->
         <div class="flex-1 mb-6">
-            <h2 class="text-2xl font-bold md:text-7xl">Hvordan skaber Plastic Change en <span class="text-orange">forskel</span>?</h2>
+            <h2 class="text-2xl font-bold md:text-7xl ml-10">Hvordan skaber Plastic Change en <span class="text-orange">forskel</span>?</h2>
         </div>
         
         <!-- Brødtekst -->
-        <div class="flex-1">
-            <p class="text-base mt-2 md:text-lg">
+        <div class="flex-1 ml-2 md:ml-10"> <!-- Tilføj margin-left her -->
+            <p class="text-base mt-2 md:text-lg mx-auto my-10 max-w-sm md:max-w-md lg:max-w-2xl">
                 Langt størstedelen af din støtte går til <span class="font-bold">hav- og miljøindsatser</span>, hvor vi arbejder for at mindske plastikforurening – både i Danmark og internationalt. Vi gør dette gennem <span class="font-bold">oplysning, vidensdeling, events, undervisning og foredrag.</span> Vores mål er at mobilisere og engagere en større Plastic Changer-bevægelse, der allerede er godt i gang.
                 <br><br>
                 Vi står også i spidsen for <span class="font-bold">årlige oprydninger</span> i naturen, hvor vi samarbejder med andre organisationer fra hele verden for at skabe en <span class="font-bold">renere planet.</span>
-                </p>
+            </p>
         </div>
-    </section>  
-    
-    <section id="Farvede bobler med forklarende tekst" class="flex items-start gap-8 my-28">
+    </section>
+        
+    <section id="Farvede bobler med forklarende tekst" class="flex items-start gap-8 my-28 ml-8 md:ml-10">
         <!-- Billede -->
-        <img src="/public/farver.webp" alt="Illustration af Plastic Change" class="w-1/4 max-w-[30px]">
+        <img src="/public/farver.webp" alt="Illustration af Plastic Change" class="w-1/4 max-w-[30px] animate-pulse">
       
         <!-- Forklarende tekst -->
-        <div class="flex flex-col justify-start space-y-8 md:w-1/2 text-nowrap">
-          <p class="text-base">Hav- og miljøindsatser (70%)</p>
-          <p class="text-base">Fundraising og indsamlinger (22%)</p>
-          <p class="text-base">Projektstyring og administration (8%)</p>
+        <div class="flex flex-col justify-start space-y-8 md:w-1/2 text-nowrap animate-pulse">
+          <p class="text-base font-bold">Hav- og miljøindsatser (70%)</p>
+          <p class="text-base font-bold">Fundraising og indsamlinger (22%)</p>
+          <p class="text-base font-bold">Projektstyring og administration (8%)</p>
         </div>
     </section>
 
