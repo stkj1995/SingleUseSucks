@@ -97,6 +97,7 @@
   border-radius: 50%; /* Gør dem runde */
   transition: background-color 0.3s ease; /* Animering af baggrundsfarven */
   z-index: 1000; /* Sørger for at punkterne er ovenpå andre elementer */
+  white-space: nowrap; /* Forhindre tekstbrud */
 }
 
 .progress-point:hover {
@@ -138,7 +139,17 @@
   z-index: 1000; /* Sørger for at punkterne er ovenpå andre elementer */
 }
 
+.progress-label {
+  margin-left: 10px; /* Afstand mellem punktet og teksten */
+  color: var(--dark-blue); /* Farve på teksten */
+  font-size: 10px; /* Juster skrifttypestørrelse efter behov */
+  opacity: 0; /* Skjul teksten som standard */
+  transition: opacity 0.3s; /* Overgangseffekt for at vise teksten */
+}
 
+.progress-point:hover .progress-label {
+  opacity: 1; /* Vis teksten ved hover */
+}
 
   /* Flip animation */
 
