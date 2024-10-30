@@ -7,13 +7,11 @@ import { animate } from 'motion';
 ---
 <article class="container mx-auto px-4 py-8">
    
-  <section id="Overskrift og brødtekst" class="flex flex-col md:flex-row gap-8 md:gap-10 mx-auto mb-10 max-w-screen-xl"> <!-- Justeret til at inkludere mx-auto og max-w -->
-    <!-- Overskrift -->
+  <section id="Overskrift og brødtekst" class="flex flex-col md:flex-row gap-8 md:gap-10 mx-auto mb-10 max-w-screen-xl">
     <div class="flex-1 mb-6">
-      <h2 class="text-2xl font-bold md:text-4xl lg:text-7xl ml-10 md:ml-10">Hvordan skaber Plastic Change en <span class="text-orange">forskel</span>?</h2>
+      <h2 class="text-2xl font-bold md:text-4xl lg:text-7xl ml-10">Hvordan skaber Plastic Change en <span class="text-orange">forskel</span>?</h2>
     </div>
-        
-    <!-- Brødtekst -->
+    
     <div class="flex-1 ml-2 md:ml-8">
       <p class="text-base mt-2 md:text-lg mx-auto max-w-sm md:max-w-md lg:max-w-2xl">
         Langt størstedelen af din støtte går til <span class="font-bold">hav- og miljøindsatser</span>, hvor vi arbejder for at mindske plastikforurening – både i Danmark og internationalt. Vi gør dette gennem <span class="font-bold">oplysning, vidensdeling, events, undervisning og foredrag.</span> Vores mål er at mobilisere og engagere en større Plastic Changer-bevægelse, der allerede er godt i gang.
@@ -24,7 +22,8 @@ import { animate } from 'motion';
   </section>
   
   <div class="flex flex-col md:flex-row gap-8 md:gap-10 mx-auto max-w-screen-xl">
-    <section id="Animationer" class="space-y-8 md:space-y-10 p-4 md:p-10 md:ml-44">
+    <section id="Animationer" class="space-y-8 md:space-y-10 p-4 md:p-10 md:ml-44 flex-1">
+      
       <!-- Animation 1: Fisk -->
       <div
         x-data="{ visible: false }"
@@ -33,25 +32,30 @@ import { animate } from 'motion';
             'opacity-100 translate-x-0 scale-100 animate__animated animate__fadeInRight': visible, 
             'opacity-0 translate-x-full scale-90': !visible 
         }" 
-        class="flex items-center space-x-4 transition duration-3000 ease-out transform opacity-0 translate-x-full scale-90">
+        class="flex items-center space-x-4 transition duration-3000 ease-out transform opacity-0 translate-x-full scale-90"
+      >
         <img src="/fisk_datavis_70.webp" alt="Fisk" class="w-2/3 h-2/3 md:w-70p md:h-70p ml-10" />
-        <p></p>
+        <!-- Bubbles Container -->
+        <div class="relative flex flex-col items-end">
+          <img src="/boble_v.svg" alt="Bubbles" class="w-16 h-16 animate-pulse z-10" />
+          <img src="/boble_h.svg" alt="Bubbles" class="w-20 h-20 animate-pulse z-10" />
+          <img src="/boble_v.svg" alt="Bubbles" class="w-20 h-20 animate-pulse z-10" />
+          <img src="/boble_h.svg" alt="Bubbles" class="w-18 h-18 animate-pulse z-10" />
+        </div>
       </div>
-    
-  <!-- Animation 2: Hjerte -->
-<div
-x-data="{ visible: false }"
-x-intersect:enter="visible = true"
-x-bind:class="{ 
-    'opacity-100 translate-y-0 scale-110 animate__animated animate__pulse animate__infinite': visible, 
-    'opacity-0 -translate-y-full scale-90': !visible 
-}" 
-class="flex items-center space-x-4 transition duration-4000 ease-out transform opacity-0 -translate-y-full scale-90">
-<img src="/hjerte_datavis_22.webp" alt="Hjerte" class="w-1/3 h-1/3 md:w-22p md:h-22p ml-10" /> 
-<p></p>
-</div>
-
-    
+  
+      <!-- Animation 2: Hjerte -->
+      <div
+        x-data="{ visible: false }"
+        x-intersect:enter="visible = true"
+        x-bind:class="{ 
+            'opacity-100 translate-y-0 scale-110 animate__animated animate__pulse animate__infinite': visible, 
+            'opacity-0 -translate-y-full scale-90': !visible 
+        }" 
+        class="flex items-center space-x-4 transition duration-4000 ease-out transform opacity-0 -translate-y-full scale-90">
+        <img src="/hjerte_datavis_22.webp" alt="Hjerte" class="w-1/3 h-1/3 md:w-22p md:h-22p ml-10" />
+      </div>
+  
       <!-- Animation 3: Skraldespand -->
       <div
         x-data="{ visible: false }"
@@ -61,17 +65,13 @@ class="flex items-center space-x-4 transition duration-4000 ease-out transform o
             'opacity-0 -translate-x-full scale-90': !visible 
         }" 
         class="flex items-center space-x-4 transition duration-3000 ease-out delay-150 transform opacity-0 -translate-x-full scale-90">
-        <img src="/skrald_datavis_8.webp" alt="Skraldespand" class="w-1/5 h-1/5 md:w-8p md:h-8p ml-52" /> 
-        <p></p>
+        <img src="/skrald_datavis_8.webp" alt="Skraldespand" class="w-1/5 h-1/5 md:w-8p md:h-8p ml-52" />
       </div>
     </section>
     
-
     <section id="Farvede bobler med forklarende tekst" class="flex items-start gap-4 md:gap-8 mt-10 md:mt-96 ml-10">
-      <!-- Billede -->
       <img src="/farver.webp" alt="Illustration af Plastic Change" class="w-1/3 max-w-[20px] animate-pulse md:max-w-[40px]"> 
       
-      <!-- Forklarende tekst -->
       <div class="flex flex-col justify-start space-y-4 md:space-y-14 md:w-1/2 text-nowrap"> 
         <p class="text-sm md:text-base font-bold">Hav- og miljøindsatser (70%)</p>
         <p class="text-sm md:text-base font-bold">Fundraising og indsamlinger (22%)</p>
@@ -79,5 +79,4 @@ class="flex items-center space-x-4 transition duration-4000 ease-out transform o
       </div>
     </section>
   </div>
-
 </article>
