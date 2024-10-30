@@ -1,0 +1,62 @@
+---
+
+---
+
+<div class="image-container">
+<img src="src/assets/images/medskrald.webp" class="fade-image" id="image1" alt="">
+<img src="src/assets/images/udenskrald.webp" class="fade-image" id="image2" alt="">
+</div>
+
+<style>.image-container {
+    position: relative;
+    height: 100vh; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.fade-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease; /* Fade transition */
+}
+
+#image1 {
+    opacity: 1; /* Initially visible */
+}
+
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const image1 = document.getElementById('image1');
+    const image2 = document.getElementById('image2');
+
+    // Initially, show the first image
+    image1.style.opacity = '1';
+    image2.style.opacity = '0';
+
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+
+        // Change the images based on scroll position
+        if (scrollPosition < 500) {
+            // Show the first image
+            image1.style.opacity = '1';
+            image2.style.opacity = '0';
+        } else if (scrollPosition < 1000) {
+            // Fade out the first image and fade in the second
+            const fade = (scrollPosition - 500) / 500;
+            image1.style.opacity = (1 - fade).toString();
+            image2.style.opacity = fade.toString();
+        } else {
+            // Show the second image fully
+            image1.style.opacity = '0';
+            image2.style.opacity = '1';
+        }
+    });
+});
+
+</script>
