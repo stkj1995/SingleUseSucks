@@ -1,6 +1,12 @@
 @import "animate.css/animate.min.css";
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
+@font-face {
+  font-family: 'Sonder';
+  src: url('/src/assets/fonts/SonderRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @tailwind base;
 @tailwind components;
@@ -21,17 +27,15 @@
   }
 
   body {
-    /* background: linear-gradient(to bottom, var(--light-blue), var(--dark-blue)); /* Gradient fra lys blå til mørkeblå */
     color: var(--dark-blue); /* Mørkeblå tekst for kontrast */
-    font-family: "Poppins", sans-serif; /* Brug Poppins som skrifttype */
+    font-family: "Roboto", sans-serif; /* Brug Roboto som skrifttype */
     margin: 0;
     padding: 0;
     cursor: url("/src/assets/images/icons8-seahorse-48.png"), auto;
-    background-size: cover; /* Sørger for at baggrundsbilledet dækker hele skærmen */
-    background-position: center; /* Centrerer billedet */
-    background-repeat: no-repeat; /* Ingen gentagelse af billedet */
-    background-attachment: fixed; /* Giver en parallax-effekt, hvis ønskes */
-    color: var(--dark-blue); /* Mørk blå farve for tekst */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   img {
@@ -48,15 +52,17 @@
 
   h1 {
     color: var(--orange); /* Orange til overskrifter */
-    font-family: "Playfair Display", serif; /* Brug Playfair Display til overskrifter */
+    font-family: "Sonder", serif; /* Brug Sonder til overskrifter */
     font-size: 30px; /* Større fontstørrelse for h1 */
     margin-bottom: 20px; /* Margin under overskriften */
+    font-weight: 300; /* Roboto Light */
   }
 
   h2 {
     color: var(--white); /* Hvid til underoverskrifter */
     font-size: 20px; /* Mindre størrelse for h2 */
     margin-bottom: 15px; /* Margin under h2 */
+    font-weight: 300; /* Roboto Light */
   }
 
   .text {
@@ -64,6 +70,7 @@
     font-size: 16px; /* Valgfri skriftstørrelse */
     line-height: 1.5; /* Valgfri linjehøjde */
     margin-bottom: 20px; /* Margin under teksten */
+    font-weight: 400; /* Roboto Regular */
   }
 
   a {
@@ -87,6 +94,7 @@
     transition: background-color 0.3s, color 0.3s; /* Blød overgang for hover-effekt */
     display: inline-block; /* Gør knappen til en inline-block */
     margin-top: 10px; /* Margin over knappen */
+    font-weight: 700; /* Roboto Bold for knapper */
   }
 
   .button:hover {
