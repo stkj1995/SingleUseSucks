@@ -4,7 +4,7 @@ import Link from '../components/Link.astro';
 import { animate } from 'motion';
 ---
 
-<nav x-data="{ isOpen: false }" class="w-full flex items-center justify-between p-4  top-0 z-50 mb-10">
+<nav x-data="{ isOpen: false }" class="w-full flex sticky items-center justify-between p-4 top-0 z-50" >
     <header x-data="{ bobble: false }" x-init="bobble = true" class="w-full flex justify-left items-start py-4">
         <img 
             src="/logo.png" 
