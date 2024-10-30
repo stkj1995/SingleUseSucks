@@ -38,12 +38,12 @@ import "../styles/tobii.min.css";
                         <Image src={tal1} class="w-5/6" alt="foto" />
                     </figure>
                     <li class="pl-0 flex w-[100vw] items-start justify-center flex-col overflow-hidden">
-                        <figcaption class="pl-4 italic w-1/3">
+                        <figcaption class="pl-4 w-1/3 md:mb-14">
                             World Cleanup Day er et globalt handlekraftigt fællesskab med et formål om at gøre verden renere. 
                             I 2022 deltog flere end 15 mio mennesker fra 190 lande, og tilsammen blev der samlet min. 60 tons affald. Vær en del af World Cleanup Day, og vær med til at gøre en forskel.
                         </figcaption>
-                        <figure class="flex flex-row max-w-[300px]">
-                            <Image src={worldcleanuplogo} class="w-5/6" alt="foto" />
+                        <figure class="flex flex-row max-w-[300px] ">
+                            <Image src={worldcleanuplogo} class="w-5/6 md:mb-8" alt="foto" />
                         </figure>
                         <NewButton>Deltag her</NewButton>
                     </li>
@@ -57,38 +57,55 @@ import "../styles/tobii.min.css";
                         </h2>                       
                     </li>
                 
-                    <section id="tal1og2">
-                    <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
-                        <figure class="flex flex-col items-center max-w-[300px]">
-                            <Image src={pose} class="md:w-20 md:h-34" alt="foto" />
-                            <figcaption class="pl-4 w-1/3 text-left text-nowrap">
-                                <span class="font-bold">Dit indkøb</span> <br><br>
-                                <span class="font-roboto-light">Tag muleposer med og sig nej tak til plastikposer</span>
-                            </figcaption>      
-                        </figure>
-                    </li>
-                    
-                    <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
-                        <figure class="flex flex-col items-center max-w-[300px] mt-28">
-                            <div class="flex flex-row">
-                                <Image src={drikkedrunk} class="md:w-11 md:h-36 md:ml-26" alt="foto" />
-                                <Image src={flueben} class="md:w-12 md:h-12" alt="foto" />
-                            </div>
-                            <figcaption class="pl-4 w-1/3 text-left text-nowrap">
+                    <section class="tal1og2">
+                        <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
+                            <figure class="flex flex-row items-start max-w-[800px] mt-12">
+                                <!-- Tal 1 til venstre -->
+                                <div class="flex flex-col items-start">
+                                    <Image src={tal1} class="md:w-14 md:h-38 md:ml-5" alt="foto" />
+                                </div>
+                                
+                                <!-- Pose til højre -->
+                                <div class="flex flex-col items-start pl-4">
+                                    <Image src={pose} class="md:w-14 md:h-24" alt="Indkøbspose" />
+                                    <figcaption class="w-1/3 text-nowrap" >
+                                        <span class="font-bold">Din vandflaske</span> <br><br>
+                                        <span class="font-roboto-light">Brug drikkedunk og undgå købevand</span>
+                                    </figcaption>
+                                </div>
+                            </figure>
+                        </li>
+                        
+                        <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto mt-10">
+                            <figure class="flex flex-row items-center max-w-[300px] mt-10">
+                                <!-- Tal 2 til venstre -->
+                                <div class="flex flex-col items-start">
+                                    <Image src={tal2} class="md:w-32 md:h-44 md:ml-5" alt="foto" />
+                                </div>
+                        
+                                <!-- Drikkedunk og flueben -->
+                                <div class="flex flex-col items-center">
+                                    <Image src={flueben} class="md:w-12 md:h-12 ml-4" alt="Flueben" />
+                                    <Image src={drikkedrunk} class="md:w-11 md:h-36 " alt="Drikkedunk" />
+                                </div>
+                            </figure>
+                        
+                            <!-- Figcaption skal nu være under figure -->
+                            <figcaption class="pl-4 w-1/3 text-nowrap mt-2 text-center">
                                 <span class="font-bold">Din vandflaske</span> <br><br>
                                 <span class="font-roboto-light">Brug drikkedunk og undgå købevand</span>
                             </figcaption>
-                        </figure>
-                    </li>
-                    
+                        </li>
+                        
                     </section>
+                    
 
 
-                <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[300px]"><Image src={creme} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Scannede billeder, der fanger minderne fra fortiden på ny.</figcaption></figure></li>
+                <!-- <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[300px]"><Image src={creme} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Scannede billeder, der fanger minderne fra fortiden på ny.</figcaption></figure></li>
                 <li class="pl-0 flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[100px]"><Image src={drikkedrunk} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Lysspredning fra kameraet giver billederne en drømmende effekt.</figcaption></figure></li>
                 <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[300px]"><Image src={sadsmiley} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Et prisvenligt objektiv, der gør det muligt at tage fantastiske billeder.</figcaption></figure></li>
                 <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[300px]"><Image src={tshirt} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Dette foto er skudt med Canon EOS, en klassiker blandt fotografer for dens kvalitet og pålidelighed.</figcaption></figure></li>
-                <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[300px]"><Image src={pose} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Scannede billeder, der fanger minderne fra fortiden på ny.</figcaption></figure></li>
+                <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[300px]"><Image src={pose} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Scannede billeder, der fanger minderne fra fortiden på ny.</figcaption></figure></li> -->
                 </ul>
             </section>
         </div>
