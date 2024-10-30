@@ -59,7 +59,7 @@
   }
 
   h2 {
-    color: var(--dark-blue); /* Hvid til underoverskrifter */
+    color: var(--white); /* Hvid til underoverskrifter */
     font-family: "Sonder", serif;
     font-size: 20px; /* Mindre størrelse for h2 */
     margin-bottom: 15px; /* Margin under h2 */
