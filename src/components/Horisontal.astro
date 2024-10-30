@@ -11,6 +11,7 @@ import drikkedrunk from "../assets/images/drikkedunk.png";
 import sadsmiley from "../assets/images/sadsmiley.png";
 import tshirt from "../assets/images/tshirt.png";
 import worldcleanuplogo from "../assets/images/worldcleanuplogo.png";
+import flueben from "../assets/images/flueben.png";
 import tal1 from "../assets/images/1.png";
 import tal2 from "../assets/images/2.png";
 import tal3 from "../assets/images/3.png";
@@ -24,8 +25,6 @@ import "../styles/tobii.min.css";
 <!-- Baggrundsfarve -->
 <article class="bg-darkblue w-screen mx-auto text-white">
     <section id="overskrift-og-brodtekst" class="flex flex-col md:flex-row gap-8 md:gap-10 mx-auto mb-10 max-w-screen-xl">  
-    
-    <section id="Tal overskrift" class="flex flex-col md:flex-row gap-8 md:gap-10 mx-auto mb-10 max-w-screen-xl">
         <div class="flex-1 mb-6 flex justify-center md:justify-end">
             <h2 class="text-2xl font-bold md:text-4xl lg:text-6xl text-center md:text-right ml-10 mr-10 md:mt-20">
                 Hvordan kan du som forbruger selv bidrage?
@@ -57,9 +56,34 @@ import "../styles/tobii.min.css";
                           gode <br> tips <br> mod <br> plastikspild
                         </h2>                       
                     </li>
+                
+                    <section id="tal1og2">
+                    <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
+                        <figure class="flex flex-col items-center max-w-[300px]">
+                            <Image src={pose} class="md:w-20 md:h-34" alt="foto" />
+                            <figcaption class="pl-4 w-1/3 text-left text-nowrap">
+                                <span class="font-bold">Dit indkøb</span> <br><br>
+                                <span class="font-roboto-light">Tag muleposer med og sig nej tak til plastikposer</span>
+                            </figcaption>      
+                        </figure>
+                    </li>
+                    
+                    <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
+                        <figure class="flex flex-col items-center max-w-[300px] mt-28">
+                            <div class="flex flex-row">
+                                <Image src={drikkedrunk} class="md:w-11 md:h-36 md:ml-26" alt="foto" />
+                                <Image src={flueben} class="md:w-12 md:h-12" alt="foto" />
+                            </div>
+                            <figcaption class="pl-4 w-1/3 text-left text-nowrap">
+                                <span class="font-bold">Din vandflaske</span> <br><br>
+                                <span class="font-roboto-light">Brug drikkedunk og undgå købevand</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    
+                    </section>
 
-                <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[200px]"><Image src={maelk} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Et prisvenligt objektiv, der gør det muligt at tage fantastiske billeder.</figcaption></figure></li>
-                <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[300px]"><Image src={balloons} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Dette foto er skudt med Canon EOS, en klassiker blandt fotografer for dens kvalitet og pålidelighed.</figcaption></figure></li>
+
                 <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[300px]"><Image src={creme} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Scannede billeder, der fanger minderne fra fortiden på ny.</figcaption></figure></li>
                 <li class="pl-0 flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[100px]"><Image src={drikkedrunk} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Lysspredning fra kameraet giver billederne en drømmende effekt.</figcaption></figure></li>
                 <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[300px]"><Image src={sadsmiley} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Et prisvenligt objektiv, der gør det muligt at tage fantastiske billeder.</figcaption></figure></li>
