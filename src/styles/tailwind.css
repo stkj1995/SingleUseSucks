@@ -59,14 +59,23 @@
   }
 
   h2 {
-    color: var(--white); /* Hvid til underoverskrifter */
+    color: var(--dark-blue); /* Hvid til underoverskrifter */
+    font-family: "Sonder", serif;
     font-size: 20px; /* Mindre størrelse for h2 */
     margin-bottom: 15px; /* Margin under h2 */
     font-weight: 300; /* Roboto Light */
   }
 
   .text {
-    color: var(--dark-blue); /* Mørk blå farve */
+    color: var(--white); /* Mørk blå farve */
+    font-size: 16px; /* Valgfri skriftstørrelse */
+    line-height: 1.5; /* Valgfri linjehøjde */
+    margin-bottom: 20px; /* Margin under teksten */
+    font-weight: 400; /* Roboto Regular */
+  }
+
+  .figcaption {
+    color: var(--white); /* Mørk blå farve */
     font-size: 16px; /* Valgfri skriftstørrelse */
     line-height: 1.5; /* Valgfri linjehøjde */
     margin-bottom: 20px; /* Margin under teksten */
