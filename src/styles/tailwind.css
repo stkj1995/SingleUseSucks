@@ -207,4 +207,31 @@
   animation: pulse 1s infinite;
 }
 
+@keyframes subtleRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg); /* En lille vippe til højre */
+  }
+  50% {
+    transform: rotate(-10deg); /* En lille vippe til venstre */
+  }
+  100% {
+    transform: rotate(0deg); /* Tilbage til startposition */
+  }
+}
 
+.animate__subtle-rotate {
+  animation: subtleRotate 1s ease forwards; /* Juster varigheden efter behov */
+}
+
+@keyframes swim {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.fish-animation {
+  animation: swim 1.5s ease-in-out infinite;
+}
