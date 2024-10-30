@@ -20,47 +20,49 @@ import tal6hvid from "../assets/images/6hvid.png";
 import { animate } from 'motion';
 import "../styles/tobii.min.css"; 
 ---
-<section id="Overskrift og brødtekst" class="flex flex-col md:flex-row gap-8 md:gap-10 mx-auto mb-10 max-w-screen-xl">
-    <div class="flex-1 mb-6 flex justify-center md:justify-end">
-        <h2 class="text-2xl font-bold md:text-4xl lg:text-5xl text-center md:text-right ml-10 mr-10">Hvordan kan du som forbruger selv bidrage?</h2>
-    </div>
-</section>
-
-<section id="Tal overskrift" class="flex flex-col md:flex-row gap-8 md:gap-10 mx-auto mb-10 max-w-screen-xl">
-    <div class="flex-1 mb-6 flex justify-center md:justify-end">
-        <p class="text-xl font-bold md:text-4xl lg:text-1xl text-center md:text-right ml-10 mr-10">
-            </p>
-    </div>
-
-<div class="overflow-clip mt-16">
-    <section id="horisontalscrollsection" class="h-[400vw]">
-        <ul id="horisontalliste" class="list-none pl-0 flex sticky top-[10vh]">
-            <figure class="flex flex-row max-w-[300px]">
-                <Image src={tal1} class="w-5/6" alt="foto" />
-            </figure>
-            <li class="pl-0 flex w-[100vw] items-start justify-center flex-col overflow-hidden">
-                <figcaption class="pl-4 italic w-1/3">
-                    World Cleanup Day er et globalt handlekraftigt fællesskab med et formål om at gøre verden renere. 
-                    I 2022 deltog flere end 15 mio mennesker fra 190 lande, og tilsammen blev der samlet min. 60 tons affald. Vær en del af World Cleanup Day, og vær med til at gøre en forskel.
-                </figcaption>
-                <figure class="flex flex-row max-w-[300px]">
-                    <Image src={worldcleanuplogo} class="w-5/6" alt="foto" />
-                </figure>
-                <Button></Button>
-            </li>
-            
-        <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[200px]"><Image src={maelk} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Et prisvenligt objektiv, der gør det muligt at tage fantastiske billeder.</figcaption></figure></li>
-        <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[300px]"><Image src={balloons} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Dette foto er skudt med Canon EOS, en klassiker blandt fotografer for dens kvalitet og pålidelighed.</figcaption></figure></li>
-        <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[300px]"><Image src={creme} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Scannede billeder, der fanger minderne fra fortiden på ny.</figcaption></figure></li>
-        <li class="pl-0 flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[100px]"><Image src={drikkedrunk} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Lysspredning fra kameraet giver billederne en drømmende effekt.</figcaption></figure></li>
-        <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[300px]"><Image src={sadsmiley} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Et prisvenligt objektiv, der gør det muligt at tage fantastiske billeder.</figcaption></figure></li>
-        <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[300px]"><Image src={tshirt} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Dette foto er skudt med Canon EOS, en klassiker blandt fotografer for dens kvalitet og pålidelighed.</figcaption></figure></li>
-        <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[300px]"><Image src={pose} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Scannede billeder, der fanger minderne fra fortiden på ny.</figcaption></figure></li>
-        </ul>
+<!-- Baggrundsfarve -->
+<article class="bg-[#013755] w-screen mx-auto">
+    <section id="Overskrift og brødtekst" class="flex flex-col md:flex-row gap-8 md:gap-10 mx-auto mb-10 max-w-screen-xl">
+        <div class="flex-1 mb-6 flex justify-center md:justify-end">
+            <h2 class="text-2xl font-bold md:text-4xl lg:text-5xl text-center md:text-right ml-10 mr-10 md:mt-20">Hvordan kan du som forbruger selv bidrage?</h2>
+        </div>
     </section>
-</div>
-</section>
 
+    <section id="Tal overskrift" class="flex flex-col md:flex-row gap-8 md:gap-10 mx-auto mb-10 max-w-screen-xl">
+        <div class="flex-1 mb-6 flex justify-center md:justify-end">
+            <p class="text-xl font-bold md:text-4xl lg:text-1xl text-center md:text-right ml-10 mr-10">
+                </p>
+        </div>
+
+        <div class="overflow-clip mt-16">
+            <section id="horisontalscrollsection" class="h-[400vw]">
+                <ul id="horisontalliste" class="list-none pl-0 flex sticky top-[10vh]">
+                    <figure class="flex flex-row max-w-[300px]">
+                        <Image src={tal1} class="w-5/6" alt="foto" />
+                    </figure>
+                    <li class="pl-0 flex w-[100vw] items-start justify-center flex-col overflow-hidden">
+                        <figcaption class="pl-4 italic w-1/3">
+                            World Cleanup Day er et globalt handlekraftigt fællesskab med et formål om at gøre verden renere. 
+                            I 2022 deltog flere end 15 mio mennesker fra 190 lande, og tilsammen blev der samlet min. 60 tons affald. Vær en del af World Cleanup Day, og vær med til at gøre en forskel.
+                        </figcaption>
+                        <figure class="flex flex-row max-w-[300px]">
+                            <Image src={worldcleanuplogo} class="w-5/6" alt="foto" />
+                        </figure>
+                        <Button></Button>
+                    </li>
+                    
+                <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[200px]"><Image src={maelk} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Et prisvenligt objektiv, der gør det muligt at tage fantastiske billeder.</figcaption></figure></li>
+                <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[300px]"><Image src={balloons} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Dette foto er skudt med Canon EOS, en klassiker blandt fotografer for dens kvalitet og pålidelighed.</figcaption></figure></li>
+                <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[300px]"><Image src={creme} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Scannede billeder, der fanger minderne fra fortiden på ny.</figcaption></figure></li>
+                <li class="pl-0 flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[100px]"><Image src={drikkedrunk} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Lysspredning fra kameraet giver billederne en drømmende effekt.</figcaption></figure></li>
+                <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[300px]"><Image src={sadsmiley} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Et prisvenligt objektiv, der gør det muligt at tage fantastiske billeder.</figcaption></figure></li>
+                <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[300px]"><Image src={tshirt} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Dette foto er skudt med Canon EOS, en klassiker blandt fotografer for dens kvalitet og pålidelighed.</figcaption></figure></li>
+                <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[300px]"><Image src={pose} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Scannede billeder, der fanger minderne fra fortiden på ny.</figcaption></figure></li>
+                </ul>
+            </section>
+        </div>
+    </section>
+</article>
 
 <script>
     /* Import af Motion One biblioteket */
