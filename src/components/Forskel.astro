@@ -42,15 +42,15 @@ import { animate } from 'motion';
     <section id="Animationer" class="space-y-8 md:space-y-10 p-4 md:p-10 md:ml-44 flex-1">
       <!-- Animation 1: Fisk -->
       <div
-        x-data="{ visible: false }"
-        x-intersect:enter="visible = true"
-        x-bind:class="{ 
-            'opacity-100 translate-x-0 scale-100 animate__animated animate__fadeInRight': visible, 
-            'opacity-0 translate-x-full scale-90': !visible 
-        }" 
-        class="flex items-center space-x-4 transition duration-3000 ease-out transform opacity-0 translate-x-full scale-90"
+      x-data="{ visible: false }"
+      x-intersect:enter="visible = true"
+      x-bind:class="{ 
+          'opacity-100 translate-x-0 scale-100 animate__animated animate__fadeInRight fish-animation': visible, 
+          'opacity-0 translate-x-full scale-90': !visible 
+      }" 
+      class="flex items-center space-x-4 transition duration-3000 ease-out transform opacity-0 translate-x-full scale-90"
       >
-        <img src="/fisk_datavis_70.webp" alt="Fisk" class="w-2/3 h-2/3 md:w-70p md:h-70p ml-10" />
+      <img src="/fisk_datavis_70.webp" alt="Fisk" class="w-2/3 h-2/3 md:w-70p md:h-70p ml-10" />
       </div>
     
       <!-- Animation 2: Hjerte -->
@@ -79,3 +79,15 @@ import { animate } from 'motion';
     </section>
   </div>
 </article>
+
+<style>
+  @keyframes swim {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+
+  .fish-animation {
+    animation: swim 1.5s ease-in-out infinite;
+  }
+</style>
