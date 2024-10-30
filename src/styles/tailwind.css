@@ -20,7 +20,7 @@
   }
   
   body {
-    background: linear-gradient(to bottom, var(--light-blue), var(--dark-blue)); /* Gradient fra lys blå til mørkeblå */
+    /* background: linear-gradient(to bottom, var(--light-blue), var(--dark-blue)); /* Gradient fra lys blå til mørkeblå */
     color: var(--dark-blue); /* Mørkeblå tekst for kontrast */
     font-family: 'Poppins', sans-serif; /* Brug Poppins som skrifttype */
     margin: 0;
