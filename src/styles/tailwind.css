@@ -157,6 +157,18 @@
 
 }
 
+/* Tilføj denne CSS hvis det er nødvendigt */
+[data-animate="fade-right"] {
+  transform: translateX(-20px);
+}
+[data-animate="fade-left"] {
+  transform: translateX(20px);
+}
+[data-animate="fade-down"] {
+  transform: translateY(-20px);
+}
+
+
 /* Større skærme styling */
 @media (min-width: 640px) {
   .container {
