@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
 @font-face {
-  font-family: 'Sonder';
-  src: url('/src/assets/fonts/SonderRegular.woff') format('woff');
+  font-family: "Sonder";
+  src: url("/src/assets/fonts/SonderRegular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -110,6 +110,24 @@
     background-color: var(--button-hover-bg); /* Mørkere orange til hover */
     color: var(--white); /* Hvid tekst ved hover for kontrast */
   }
+  .new-button {
+    background-color: var(--orange); /* Orange til knapper */
+    color: var(--dark-blue); /* Mørkeblå tekst på knapper */
+    border: none; /* Ingen kant */
+    border-radius: 15px; /* Rundede hjørner */
+    padding: 10px 20px; /* Indre afstand */
+    font-size: 14px; /* Mindre fontstørrelse til mobil */
+    cursor: pointer; /* Cursor ændres til hånd */
+    transition: background-color 0.3s, color 0.3s; /* Blød overgang for hover-effekt */
+    display: inline-block; /* Gør knappen til en inline-block */
+    margin-top: 10px; /* Margin over knappen */
+    font-weight: 300; /* Roboto Light for knapper */
+  }
+
+  .new-button:hover {
+    background-color: var(--button-hover-bg); /* Mørkere orange til hover */
+    color: var(--white); /* Hvid tekst ved hover for kontrast */
+  }
 
   /* Fælles stilarter for punkter */
   .progress-point {
@@ -208,6 +226,10 @@
   }
 
   .button {
+    font-size: 16px; /* Større fontstørrelse til knapper */
+  }
+
+  .new-button {
     font-size: 16px; /* Større fontstørrelse til knapper */
   }
 }

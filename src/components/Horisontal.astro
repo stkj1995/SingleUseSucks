@@ -1,4 +1,5 @@
 ---
+import NewButton from './NewButton.astro';
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
@@ -48,7 +49,8 @@ import "../styles/tobii.min.css";
                         <figure class="flex flex-row max-w-[300px]">
                             <Image src={worldcleanuplogo} class="w-5/6" alt="foto" />
                         </figure>
-                        <Button></Button>
+                        <NewButton>Deltag her</NewButton>
+
                     </li>
                     
                 <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[200px]"><Image src={maelk} class="w-5/6" alt="foto" /><figcaption class="pl-4 italic w-1/3">Et prisvenligt objektiv, der gør det muligt at tage fantastiske billeder.</figcaption></figure></li>
