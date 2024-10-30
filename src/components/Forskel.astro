@@ -5,14 +5,13 @@ import { Image } from 'astro:assets';
 import "../styles/tobii.min.css"; 
 import { animate } from 'motion';
 ---
-
 <article class="container mx-auto px-4 py-8">
    
-    <section id="Overskrift og brødtekst" class="flex flex-col md:flex-row gap-10 my-10">
-        <!-- Overskrift -->
-        <div class="flex-1 mb-6">
-            <h2 class="text-2xl font-bold md:text-7xl ml-10">Hvordan skaber Plastic Change en <span class="text-orange">forskel</span>?</h2>
-        </div>
+  <section id="Overskrift og brødtekst" class="flex flex-col md:flex-row gap-8 md:gap-10 mx-auto mb-10 max-w-screen-xl"> <!-- Justeret til at inkludere mx-auto og max-w -->
+    <!-- Overskrift -->
+    <div class="flex-1 mb-6">
+      <h2 class="text-2xl font-bold md:text-4xl lg:text-7xl ml-10 md:ml-10">Hvordan skaber Plastic Change en <span class="text-orange">forskel</span>?</h2>
+    </div>
         
         <!-- Brødtekst -->
         <div class="flex-1 ml-2 md:ml-10"> <!-- Tilføj margin-left her -->
@@ -26,7 +25,7 @@ import { animate } from 'motion';
         
     <section id="Farvede bobler med forklarende tekst" class="flex items-start gap-8 my-28 ml-8 md:ml-10">
         <!-- Billede -->
-        <img src="/farver.webp" alt="Illustration af Plastic Change" class="w-1/4 max-w-[30px] animate-pulse">
+        <img src="public/farver.webp" alt="Illustration af Plastic Change" class="w-1/4 max-w-[30px] animate-pulse">
       
         <!-- Forklarende tekst -->
         <div class="flex flex-col justify-start space-y-8 md:w-1/2 text-nowrap animate-pulse">
@@ -57,4 +56,3 @@ import { animate } from 'motion';
       </section>
     </div>
 </article>
-  
