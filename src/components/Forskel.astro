@@ -13,16 +13,17 @@ import { animate } from 'motion';
   <img src="/boble_h.svg" alt="Bubbles" class="w-16 h-16 animate-pulse" /> 
 </div>
 
-
 <div class="bg-lightblue w-screen md:w-screen mx-auto">
-  <article class="container mx-auto px-4 py-8">
+  <article class="container mx-auto px-20 py-20">
     <section id="Overskrift og brødtekst" class="flex flex-col md:flex-row gap-8 md:gap-10 mx-auto mb-10 max-w-screen-xl">
       <div class="flex-1 mb-6">
-        <h2 class="text-2xl font-bold md:text-4xl lg:text-8xl ml-10 mr-10 text-darkblue">Hvordan skaber Plastic Change en <span class="text-orange">forskel</span>?</h2>
+        <h2 class="text-2xl font-bold md:text-4xl lg:text-8xl ml-5 md:ml-20 lg:ml-32 xl:ml-40 mr-12 text-darkblue">
+          Hvordan <br> skaber <br> Plastic Change <br> en <br> <span class="text-orange">forskel</span>?
+        </h2>
       </div>
       
-      <div class="flex-1 ml-2 md:ml-8">
-        <p class="text-base mt-2 md:text-lg mx-auto max-w-sm md:max-w-md lg:max-w-2xl">
+      <div class="flex-1 ml-2 md:ml-8 lg:ml-40">
+        <p class="text-base mt-2 md:text-lg mx-auto max-w-xs md:max-w-md lg:max-w-2xl">
           Langt størstedelen af din støtte går til <span class="font-bold">hav- og miljøindsatser</span>, hvor vi arbejder for at mindske plastikforurening – både i Danmark og internationalt. Vi gør dette gennem <span class="font-bold">oplysning, vidensdeling, events, undervisning og foredrag.</span> Vores mål er at mobilisere og engagere en større Plastic Changer-bevægelse, der allerede er godt i gang.
           <br><br>
           Vi står også i spidsen for <span class="font-bold">årlige oprydninger</span> i naturen, hvor vi samarbejder med andre organisationer fra hele verden for at skabe en <span class="font-bold">renere planet.</span>
@@ -31,7 +32,7 @@ import { animate } from 'motion';
     </section>
 
     <div class="flex flex-col md:flex-row gap-8 md:gap-10 mx-auto max-w-screen-xl">
-      <section id="Farvede bobler med forklarende tekst" class="flex items-start gap-4 md:gap-8 mt-10 md:mt-96 ml-10">
+      <section id="Farvede bobler med forklarende tekst" class="flex items-start gap-4 md:gap-8 mt-10 md:mt-60 ml-5 lg:ml-32 xl:ml-40">
         <img src="/farver.webp" alt="Illustration af Plastic Change" class="w-1/3 max-w-[20px] animate-pulse md:max-w-[40px]"> 
         
         <div class="flex flex-col justify-start space-y-4 md:space-y-14 md:w-1/2 text-nowrap"> 
@@ -52,7 +53,7 @@ import { animate } from 'motion';
         }" 
         class="flex items-center space-x-4 transition duration-3000 ease-out transform opacity-0 translate-x-full scale-90"
         >
-        <img src="/fisk_datavis_70.webp" alt="Fisk" class="w-2/3 h-2/3 md:w-70p md:h-70p ml-10" />
+        <img src="/fisk_datavis_70.webp" alt="Fisk" class="w-2/3 h-2/3 md:w-70p md:h-70p ml-10 lg:ml-32 xl:ml-40" />
         </div>
       
         <!-- Animation 2: Hjerte -->
@@ -64,7 +65,7 @@ import { animate } from 'motion';
               'opacity-0 -translate-y-full scale-90': !visible 
           }" 
           class="flex items-center space-x-4 transition duration-4000 ease-out transform opacity-0 -translate-y-full scale-90">
-          <img src="/hjerte_datavis_22.webp" alt="Hjerte" class="w-1/3 h-1/3 md:w-22p md:h-22p ml-10" />
+          <img src="/hjerte_datavis_22.webp" alt="Hjerte" class="w-1/3 h-1/3 md:w-22p md:h-22p ml-10 lg:ml-32 xl:ml-40" />
         </div>
 
         <!-- Animation 3: Skraldespand -->
@@ -76,12 +77,13 @@ import { animate } from 'motion';
               'opacity-0 -translate-x-full scale-90': !visible 
           }" 
           class="flex items-center space-x-4 transition duration-3000 ease-out delay-150 transform opacity-0 -translate-x-full scale-90">
-          <img src="/skrald_datavis_8.webp" alt="Skraldespand" class="w-1/5 h-1/5 md:w-8p md:h-8p ml-52" />
+          <img src="/skrald_datavis_8.webp" alt="Skraldespand" class="w-1/5 h-1/5 md:w-8p md:h-8p ml-52 lg:ml-64 xl:ml-72" />
         </div>
       </section>
     </div>
   </article>
 </div>
+
 
 <style>
 @keyframes subtleRotate {
