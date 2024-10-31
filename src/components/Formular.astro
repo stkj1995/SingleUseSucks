@@ -1,8 +1,10 @@
-
 ---
+import { Image } from 'astro:assets';
+import MainLayout from "../layouts/MainLayout.astro";
+import formularbaggrund from "../assets/images/formularbaggrund.jpg";
 ---
 
-<section class="w-full w-screen">
+<section class=" w-screen">
 
     <div class="margin"></div>
 
@@ -68,7 +70,7 @@
    
 
     .parallax{
-        background: url(src/assets/images/formularbaggrund.jpg) no-repeat fixed ;
+        background: url(../assets/images/formularbaggrund.jpg) no-repeat fixed ;
         background-size: cover;
     }
 
