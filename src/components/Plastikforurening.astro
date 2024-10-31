@@ -8,15 +8,20 @@ import flaske from "../assets/images/flaske.svg";
 import "../styles/tobii.min.css"; 
 import { animate } from 'motion';
 ---
+<!-- gammel h1 -->
+<!-- <h1 class="text-end text-black text-[60px] pr-8 pt-28 md:order-1 md:pr-32 md:text-[80px] md:pl-20 md:top-0 right-8 w-100%">Hvad er plastikforuening</h1> -->
+ 
+<!-- ny 1 -->
+<!-- <h1 class="p-10 text-xl sticky text-end text-white text-[60px] pr-8 pt-52 md:order-1 md:pr-32 md:text-[80px] md:pl-20 md:top-0 right-8 w-100% animate__animated animate__fadeInRight">Hvad er <br> <br> <br> plastikforuening</h1> -->
 
-<!-- parallax w-auto bg-fixed h-screen w-100 bg-cover --> 
+
 
 <!-- div for hele afsnittet -->
  <section class="bg-[#013755] w-screen parallaxgrafik">
+    <h1 class="p-10 text-xl sticky text-end text-white text-[60px] pr-8 pt-52 md:order-1 md:pr-32 md:text-[80px] md:pl-20 md:top-0 right-8 w-100% animate__animated animate__fadeInRight">Hvad er <br> <br> <br> plastikforuening</h1>
 
     <!-- grid med lastbil, skrald og h1 -->
-    <div class="md:grid md:grid-cols-2 md:px-44 md:pt-20 md:gap-16 bg-cover bg-center grid grid-cols-12 overflow-hidden">
-        <h1 class="text-end text-white text-[60px] pr-8 pt-28 md:order-1 md:pr-32 md:text-[80px] md:pl-20  md:top-0 right-8 w-100% z-[100]">Hvad er plastikforuening</h1>
+    <div class="md:grid md:grid-cols-2 md:px-44 md:gap-16 bg-cover bg-fixed bg-center grid grid-cols-12 overflow-hidden">
             <!-- container med lastbil og skrald til animation -->
         <div class="">
             <!-- skrald -->
@@ -38,7 +43,7 @@ import { animate } from 'motion';
         </div>
     </div>
     <div class="text-white py-8 px-16 md:grid md:grid-cols-2 md:p-20 md:relative md:top-0">
-        <p class="text-center font-light md:text-xl">I dag udleder vi <span class="font-bold">8-10 mio ton</span> plastik til havet. Det svarer til <span class="font-bold">1 lastbil</span> med plastik, der tømmes <span class="font-bold">hvert minut!</span></p>
+        <p class="text-center font-light md:text-xl animate__animated animate__zoomIn">I dag udleder vi <span class="font-bold">8-10 mio ton</span> plastik til havet. Det svarer til <span class="font-bold">1 lastbil</span> med plastik, der tømmes <span class="font-bold">hvert minut!</span></p>
     </div>
 
 
@@ -49,28 +54,39 @@ import { animate } from 'motion';
     </div>
 
     <div class="text-white py-8 px-16 md:grid md:grid-cols-2 md:px-0 pb-20">
-        <p class="text-center font-light md:text-xl"> <span class="font-bold">5 % af det plastik</span> vi udleder flyder i overfladen, <span class="font-bold">mens 95% af det resterende plastik</span> ligger længere nede i vandsøjlen. </p>
+        <p class="text-center font-light md:text-xl animate__animated animate__zoomIn"> <span class="font-bold">5 % af det plastik</span> vi udleder flyder i overfladen, <span class="font-bold">mens 95% af det resterende plastik</span> ligger længere nede i vandsøjlen. </p>
     </div>
  </section>
 
  </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    
     <script>
         import { animate, stagger, inView, scroll, timeline } from "motion";
-        scroll(animate(".parallaxgrafik3", { x: [-1280, 2000], y: [200, 0] }), {
+        scroll(animate(".parallaxgrafik3", { x: [-1880, 2000], y: [200, 0] }), {
     target: document.querySelector(".parallaxgrafik"), offset: ["start end", "end start"]
     });
 
-    scroll(animate(".parallaxgrafik1", { y: [1480, -900] }), {
+    scroll(animate(".parallaxgrafik1", { y: [1650, -900] }), {
 		target: document.querySelector(".parallaxgrafik"), offset: ["start end", "end start"]
 	});
-
-
-
-
-
-
     </script>
 
 
