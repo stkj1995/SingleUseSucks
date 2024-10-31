@@ -8,13 +8,12 @@ import flaske from "../assets/images/flaske.svg";
 import "../styles/tobii.min.css"; 
 import { animate } from 'motion';
 ---
-<!-- gammel h1 -->
-<!-- <h1 class="text-end text-black text-[60px] pr-8 pt-28 md:order-1 md:pr-32 md:text-[80px] md:pl-20 md:top-0 right-8 w-100%">Hvad er plastikforuening</h1> -->
  
 
 <!-- div for hele afsnittet -->
- <section class="bg-[#013755] w-screen parallaxgrafik">
-    <h1 class="p-10 text-xl sticky text-end text-white text-[60px] pr-8 pt-52 md:order-1 md:pr-32 md:text-[110px] md:pl-20 md:top-0 right-8 w-100% animate__animated animate__fadeInRight">Hvad er <br> <br> <br> <br> plastik <br> <br> <br> <br>foruening</h1>
+
+<section class="bg-[#013755] w-screen parallaxgrafik">
+    <h1 class="p-10 md:text-8xl sticky text-end text-white text-[60px] pr-8 pt-52 md:order-1 md:pr-32 md:text-[80px] md:pl-20 md:top-0 right-8 w-100% animate__animated animate__fadeInRight">Hvad er <br> plastikforuening</h1>
 
     <!-- grid med lastbil, skrald og h1 -->
     <div class="md:grid md:grid-cols-2 md:px-44 md:gap-16 bg-cover bg-fixed bg-center grid grid-cols-12 overflow-hidden">
@@ -22,18 +21,18 @@ import { animate } from 'motion';
         <div class="">
             <!-- skrald -->
         <div class="">
-            <div class="w-36 relative top-28 left-5 md:w-60 md:relative md:left-28 md:top-44">
+            <div class="w-[600%] relative top-52 left-20 md:w-60 md:relative md:left-28 md:top-44">
                 <Image src={skrald} alt="" class="col-start-3 col-span-2 parallaxgrafik3" />
             </div>
-            <div class="w-32 relative top-24 left-8 md:w-56 md:relative md:left-12 md:top-32">
+            <div class="w-[600%] relative top-52 left-8 md:w-56 md:relative md:left-12 md:top-32">
                 <Image src={skrald} alt="" class="col-start-3 col-span-2 parallaxgrafik3"/>
             </div>
         </div>
     
               <!-- lastbil -->
-        <div class="pt-20 relative md:w-full">
-            <div class="mt-8 md:pb-32 w-full">
-                <Image src={lastbil} alt="vektorgrafik af lastbil" class="col-start-3 col-span-2 parallaxgrafik3"/>
+        <div class="pt-20 relative w-screen md:w-full">
+            <div class="mt-8 md:pb-32 w-full pb-28">
+                <Image src={lastbil} alt="vektorgrafik af lastbil" class="md:col-start-3 col-span-2 parallaxgrafik3"/>
             </div>
             </div>
         </div>
@@ -45,7 +44,7 @@ import { animate } from 'motion';
 
      <!-- datavis 2 flaske -->
  <section class="parallaxgrafik bg-[#013755] pb-20 pt-16 md:pl-20">
-    <div class="pl-16 mt-8 w-screen h-[550px] grid grid-cols-12 overflow-hidden md:py-32">
+    <div class="center mt-8 w-screen h-[550px] md:grid grid-cols-12 overflow-hidden md:py-32">
         <Image src={flaske} alt="plastikflaske med fisk og skrald" class="col-start-1 col-span-5 parallaxgrafik1 "/>
     </div>
 
@@ -57,22 +56,6 @@ import { animate } from 'motion';
  </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
    
     <script>
         import { animate, stagger, inView, scroll, timeline } from "motion";
@@ -81,9 +64,10 @@ import { animate } from 'motion';
     });
 
     scroll(animate(".parallaxgrafik1", { y: [1650, -900] }), {
-		target: document.querySelector(".parallaxgrafik"), offset: ["start end", "end start"]
-	});
+        target: document.querySelector(".parallaxgrafik"), offset: ["start end", "end start"]
+    });
     </script>
+
 
 
 
