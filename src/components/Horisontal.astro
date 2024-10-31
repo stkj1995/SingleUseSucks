@@ -37,15 +37,15 @@ import "../styles/tobii.min.css";
                     <figure class="flex flex-row max-w-[300px]">
                         <Image src={tal1} class="w-5/6" alt="foto" />
                     </figure>
-                    <li class="pl-0 flex w-[100vw] items-start justify-center flex-col overflow-hidden">
+                    <li class="pl-0 flex w-[100vw] items-start justify-center flex-col">
                         <figcaption class="pl-4 w-1/3 md:mb-14">
-                            World Cleanup Day er et globalt handlekraftigt fællesskab med et formål om at gøre verden renere. 
-                            I 2022 deltog flere end 15 mio mennesker fra 190 lande, og tilsammen blev der samlet min. 60 tons affald. Vær en del af World Cleanup Day, og vær med til at gøre en forskel.
+                            World Cleanup Day er et globalt handlekraftigt fællesskab med et formål om at gøre verden renere. <br> I 2022 deltog flere end <span class="font-bold">15 mio mennesker fra 190 lande</span>, og tilsammen blev der samlet <span class="font-bold">min. 60 tons affald</span>. <br><br> Vær en del af World Cleanup Day, og vær med til at gøre en forskel.
                         </figcaption>
-                        <figure class="flex flex-row max-w-[300px] ">
+                        <figure class="flex flex-row max-w-[300px]">
                             <Image src={worldcleanuplogo} class="w-5/6 md:mb-8" alt="foto" />
                         </figure>
-                        <NewButton>Deltag her</NewButton>
+                        <NewButton className="ml-16">Deltag her</NewButton>
+
                     </li>
                     
                     <figure class="flex flex-row max-w-[300px]">
@@ -69,32 +69,35 @@ import "../styles/tobii.min.css";
                                 <div class="flex flex-col items-start pl-4">
                                     <Image src={pose} class="md:w-20 md:h-32" alt="Indkøbspose" />
                                     <figcaption class="w-1/3 text-nowrap" >
-                                        <span class="font-bold">Din vandflaske</span> <br><br>
-                                        <span class="font-roboto-light">Brug drikkedunk og undgå købevand</span>
+                                        <span class="font-bold">Dit indkøb</span> <br>
+                                        <span class="font-roboto-light">Tag mulepose med og sig nej tak til plastikposer</span>
                                     </figcaption>
                                 </div>
                             </figure>
                         </li>
                         
                         <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto mt-10">
-                            <figure class="flex flex-row items-center max-w-[300px] mt-10">
+                            <figure class="flex flex-row items-start max-w-[300px] mt-10">
                                 <!-- Tal 2 til venstre -->
                                 <div class="flex flex-col items-start">
-                                    <Image src={tal2} class="md:w-32 md:h-44 md:ml-5" alt="foto" />
+                                    <Image src={tal2} class="md:w-40 md:h-44 md:ml-5" alt="foto" />
                                 </div>
-                        
-                                <!-- Drikkedunk og flueben -->
-                                <div class="flex flex-col items-center">
-                                    <Image src={flueben} class="md:w-12 md:h-12 ml-4" alt="Flueben" />
-                                    <Image src={drikkedrunk} class="md:w-11 md:h-36 " alt="Drikkedunk" />
+                                
+                                <!-- Drikkedunk, flueben og figcaption til højre -->
+                                <div class="flex flex-col items-start pl-8">
+                                    <!-- Drikkedunk og flueben -->
+                                    <div class="flex flex-col items-center">
+                                        <Image src={flueben} class="md:w-12 md:h-12 ml-4" alt="Flueben" />
+                                        <Image src={drikkedrunk} class="md:w-11 md:h-36" alt="Drikkedunk" />
+                                    </div>
+                                    
+                                    <!-- Figcaption under billeder -->
+                                    <figcaption class="mt-2 text-start">
+                                        <span class="font-bold">Din vandflaske</span> <br>
+                                        <span class="font-roboto-light">Brug drikkedunk og undgå købevand</span>
+                                    </figcaption>
                                 </div>
                             </figure>
-                        
-                            <!-- Figcaption skal nu være under figure -->
-                            <figcaption class="pl-4 w-1/3 text-nowrap mt-2 text-center">
-                                <span class="font-bold">Din vandflaske</span> <br><br>
-                                <span class="font-roboto-light">Brug drikkedunk og undgå købevand</span>
-                            </figcaption>
                         </li>
                     </section>
 
@@ -110,7 +113,7 @@ import "../styles/tobii.min.css";
                                 <div class="flex flex-col items-start pl-4">
                                     <Image src={maelk} class="md:w-16 md:h-32" alt="Mælk" />
                                     <figcaption class="w-1/3 text-nowrap" >
-                                        <span class="font-bold">Din mælk</span> <br><br>
+                                        <span class="font-bold">Din mælk</span> <br>
                                         <span class="font-roboto-light">Køb mælk uden skruelåg</span>
                                     </figcaption>
                                 </div>
@@ -133,7 +136,7 @@ import "../styles/tobii.min.css";
                         
                             <!-- Figcaption skal nu være under figure -->
                             <figcaption class="pl-4 w-1/3 text-nowrap mt-2 text-center">
-                                <span class="font-bold">Din fest</span> <br><br>
+                                <span class="font-bold">Din fest</span> <br>
                                 <span class="font-roboto-light">Drop engangsservice, balloner og sugerør</span>
                             </figcaption>
                         </li>
@@ -151,7 +154,7 @@ import "../styles/tobii.min.css";
                                 <div class="flex flex-col items-start pl-4">
                                     <Image src={tshirt} class="md:w-14 md:h-24" alt="Tshirt" />
                                     <figcaption class="w-1/3 text-nowrap" >
-                                        <span class="font-bold">Din tøjvask</span> <br><br>
+                                        <span class="font-bold">Din tøjvask</span> <br>
                                         <span class="font-roboto-light">Fyld maskinen, så du slider mindre på tøjet</span>
                                     </figcaption>
                                 </div>
@@ -173,7 +176,7 @@ import "../styles/tobii.min.css";
                         
                             <!-- Figcaption skal nu være under figure -->
                             <figcaption class="pl-4 w-1/3 text-nowrap mt-2 text-center">
-                                <span class="font-bold">Dine plejeprodukter</span> <br><br>
+                                <span class="font-bold">Dine plejeprodukter</span> <br>
                                 <span class="font-roboto-light">Køb i store beholdere frem for mange små</span>
                             </figcaption>
                         </li>
