@@ -1,3 +1,4 @@
+
 ---
 ---
 
@@ -5,23 +6,64 @@
 
     <div class="margin"></div>
 
-    <section class="parallax">
-<div class="parallax-inner">
-    <div class="bg-white opacity-90 mx-96 p-8 rounded-md">
-        <h1 class="text-darkblue text-center text-7xl">Bidrag her</h1>
-        <p class="">Du kan beskytte naturen, dyrelivet og vores børn mod plastik, ved at bidrage til os herunder.  </p>
-    </div>
-</div>
-<div class="parallax-inner">
-    <div class="bg-white opacity-90 mx-96 p-8 rounded-md">
-        <h1 class="text-darkblue text-center text-7xl">Skriv under</h1>
-        <p class="">Du kan beskytte naturen, dyrelivet og vores børn mod plastik, ved at bidrage til os herunder.  </p>
-    </div>
+    <section class="parallax flex flex-col items-center">
+        <div class="parallax-inner">
+            <div class="bg-white opacity-95 max-w-md p-10 rounded-md mx-auto flex flex-col">
+                <h1 class="text-darkblue text-7xl text-center">Bidrag her</h1>
+                <p class="mb-10 text-center">Du kan beskytte naturen, dyrelivet og vores børn mod plastik, ved at bidrage til os herunder.</p>
+                <div class="flex gap-16 mb-10">
+            <div class="flex gap-5">
+                <input class="p-3 border-orange" type="radio" id="html" name="månedligt" value="HTML">
+                <label class="text-orange" for="html">Månedligt</label><br>
+            </div>
+            <div class="flex gap-5">
+                <input class="p-3 border-orange" type="radio" id="css" name="engang" value="CSS">
+                <label for="css">Èn gang</label><br>
+            </div>
+            </div>
+            <div class="flex  gap-16">
+                <div class="flex flex-col text-center gap-3">
+                    <input class="p-10 border-orange" type="radio" id="css" name="engang" value="CSS">
+                    <label for="css">50</label><br>
+                </div>
+                <div class="flex flex-col text-center gap-3">
+                <input class="p-10 border-orange" type="radio" id="css" name="engang" value="CSS">
+                <label for="css">75</label><br>
+            </div>
+                <div class="flex flex-col text-center gap-3">
+                <input class="p-10 border-orange" type="radio" id="css" name="engang" value="CSS">
+                <label for="css">125</label><br>
+            </div>
+            </div>
+                <input class="rounded-2xl text-darkblue/20 p-4 border-orange" type="text" id="fname" name="fname" value="Andet beløb"><br>
+                <button class="bg-[#FF6F3C] text-[#013755] font-light px-20 py-4 md:px-28 md:py-3 rounded-2xl md:text-3xl hover:text-white">Donér nu!</button>
+        </div>
 
+
+
+
+        <div class="parallax-inner">
+           <div class="bg-white opacity-95 max-w-md p-10 rounded-md mx-auto flex flex-col">
+                <h1 class="text-darkblue text-7xl text-center">Skriv under</h1>
+                <p class=" mb-7 text-center">Kæmp sammen med os, og underskriv en global plastiktraktat, der lægger et loft over produktion af plastik.</p>
+                <p id="count-up" class="text-orange text-center text-4xl mb-3">0</p>
+                <p class="mb-8 text-center">har allerede skrevet under</p>
+                <input class="rounded-2xl text-darkblue/20 p-4 border-orange" type="text" id="fname" name="fname" value="Email"><br>
+                <div class="flex flex-col gap-8 mb-10 mt-5">
+            <div class="flex gap-5">
+                <input class="p-3 border-orange" type="radio" id="html" name="månedligt" value="HTML">
+                <label for="html">Accepter vilkår og betingelser</label><br>
+            </div>
+            <div class="flex gap-5">
+                <input class="p-3 border-orange" type="radio" id="css" name="engang" value="CSS">
+                <label for="css">Modtag Plastic Changes nyhedsbrev</label><br>
+            </div>
+            </div>
+                <button class="bg-[#FF6F3C] text-[#013755] font-light px-20 py-4 md:px-28 md:py-3 rounded-2xl md:text-3xl hover:text-white">Underskriv!</button>
+        </div>
     </section>
     <div class="margin"></div>
-</section>
-
+    
 <style>
    
 
@@ -31,7 +73,39 @@
     }
 
     .parallax-inner{
-        padding-top: 20%;
-        padding-bottom: 20%;
+        padding-top: 40%;
+        padding-bottom: 40%;
     }
 </style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const counterElement = document.getElementById("count-up");
+    const targetNumber = 15936;
+    const speed = 500; // Adjust speed for faster or slower counting
+
+    const updateCount = () => {
+        const startValue = parseInt(counterElement.innerText.replace(".", ""));
+        const increment = Math.ceil(targetNumber / speed);
+
+        if (startValue < targetNumber) {
+            counterElement.innerText = new Intl.NumberFormat("de-DE").format(startValue + increment);
+            setTimeout(updateCount, 20);
+        } else {
+            counterElement.innerText = new Intl.NumberFormat("de-DE").format(targetNumber);
+        }
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                updateCount();
+                observer.unobserve(entry.target); // Stop observing after animation
+            }
+        });
+    });
+
+    observer.observe(counterElement);
+});
+
+</script>
