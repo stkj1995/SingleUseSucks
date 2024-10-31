@@ -1,10 +1,14 @@
 ---
+import { Image } from 'astro:assets';
+import MainLayout from "../layouts/MainLayout.astro";
+import udenskrald from "../assets/images/udenskrald.webp";
+import medskrald from "../assets/images/medskrald.webp";
 
 ---
 
 <div class="image-container">
-    <img src="src/assets/images/medskrald.webp" class="fade-image" id="image1" alt="">
-    <img src="src/assets/images/udenskrald.webp" class="fade-image" id="image2" alt="">
+    <Image src={medskrald} class="fade-image" id="image1" alt="" />
+    <Image src={udenskrald} class="fade-image" id="image2" alt="" />
 </div>
 
 <style>
