@@ -6,23 +6,21 @@ import "../styles/tobii.min.css";
 import { animate } from 'motion';
 ---
 
-
 <main class="bg-lightblue w-screen mx-auto">
   <article class="container mx-auto px-5 py-5">
-  <!-- Sticky overskrift -->
-  <header class="flex items-center w-full bg-cover bg-center sticky top-0">
-    <h2 class="text-2xl font-bold md:text-4xl lg:text-8xl ml-5 md:ml-20 md:mt-20 md:mb-30 lg:ml-[150px] xl:ml-[180px] mr-5 text-darkblue">
-      Hvordan <br> skaber <br> Plastic <br> Change <br> en <br> <span class="animate-changeColor">forskel</span>?
-    </h2>
-  </header>
+    <!-- Sticky overskrift -->
+    <header class="flex items-center w-full bg-cover bg-center sticky top-0">
+      <h2 class="text-2xl font-bold md:text-4xl lg:text-8xl ml-5 md:ml-20 md:mt-20 md:mb-30 lg:ml-[150px] xl:ml-[180px] mr-5 text-darkblue hidden md:block">
+        Hvordan <br> skaber <br> Plastic <br> Change <br> en <br> <span class="animate-changeColor">forskel</span>?
+      </h2>
+    </header>
 
-  
     <!-- Overskrift og brødtekst -->
     <section id="overskrift-og-brodtekst" class="flex flex-col md:flex-row md:gap-10 mx-auto mb-10 max-w-screen-xl">
       <!-- Sticky overskrift til venstre -->
       <div class="flex-1 md:ml-10 lg:ml-20 xl:ml-32 sticky top-0 ">
       </div>
-  
+
       <!-- Brødtekst med parallax effekt -->
       <div class="flex-1 md:ml-8 lg:ml-60 relative">
         <p class="text-base md:text-lg mx-auto max-w-xs md:max-w-md lg:max-w-2xl md:mt-20 parallax-scroll">
@@ -37,31 +35,31 @@ import { animate } from 'motion';
       </div>
     </section>
   </article>
-  
+
   <div class="flex flex-col md:flex-row justify-between mx-auto max-w-6xl">
     <section id="Farvede bobler med forklarende tekst" class="flex flex-row items-start gap-4 md:gap-8 mt-5 md:mt-96 mx-auto">
       <!-- Billede -->
-      <img src="/farver.webp" alt="Illustration af Plastic Change" class="w-full md:w-1/3 max-w-[20px] md:max-w-[40px] animate-pulse"> 
-    
+      <img src="/farver.webp" alt="Illustration af Plastic Change" class="w-full md:w-1/3 max-w-[20px] md:max-w-[40px] animate-pulse">
+      
       <!-- Forklarende tekst -->
-      <div class="flex flex-col justify-start space-y-4 md:space-y-14 md:w-1/2 text-nowrap"> 
+      <div class="flex flex-col justify-start space-y-4 md:space-y-14 md:w-1/2 text-nowrap">
         <p class="text-sm md:text-base font-bold">Hav- og miljøindsatser (70%)</p>
         <p class="text-sm md:text-base font-bold">Fundraising og indsamlinger (22%)</p>
         <p class="text-sm md:text-base font-bold">Projektstyring og administration (8%)</p>
       </div>
     </section>
-      
+
     <section id="animationer" class="space-y-8 md:space-y-10 p-4 md:p-10 md:mr-60 flex flex-col items-center justify-center lg:ml-16">
       <!-- Animation 1: Fisk -->
       <div class="flex items-center space-x-4">
         <img src="/fisk_datavis_70.webp" alt="Fisk" class="w-[150px] sm:w-[250px] md:w-[350px] lg:w-[460px] ml-5 md:ml-32 lg:ml-60 xl:ml-40 fish-animation" />
       </div>
-    
+
       <!-- Animation 2: Hjerte -->
       <div class="flex items-center space-x-4">
         <img src="/hjerte_datavis_22.webp" alt="Hjerte" class="w-[70px] sm:w-[100px] md:w-[150px] lg:w-[180px] ml-5 md:ml-20 lg:ml-32 xl:ml-40 hjerte-animation" />
       </div>
-    
+
       <!-- Animation 3: Skraldespand -->
       <div class="flex items-center space-x-4">
         <img src="/skrald_datavis_8.webp" alt="Skraldespand" class="w-[40px] sm:w-[60px] md:w-[80px] lg:w-[90px] ml-5 md:ml-52 lg:ml-64 xl:ml-72 skraldespand-animation" />
@@ -69,6 +67,7 @@ import { animate } from 'motion';
     </section>
   </div>
 </main>
+
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -105,6 +104,13 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <style>
+/* Tilføj denne CSS til din stilark */
+.header-hidden {
+  transform: translateY(-100%); /* Skjuler overskriften ved at flytte den opad */
+  opacity: 0; /* Gør den usynlig */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Giver en glidende overgang */
+}
+
   /* Giv plads mellem sticky header og brødtekst */
   header {
     margin-bottom: 50px; /* Juster denne værdi efter behov */
@@ -117,8 +123,6 @@ document.addEventListener("DOMContentLoaded", function () {
     height: 100vh; /* Sørger for at indholdet fylder højden */
   }
   
-
-
   @keyframes subtleRotate {
     0% { transform: rotate(0deg); }
     25% { transform: rotate(8deg); }
@@ -152,7 +156,6 @@ document.addEventListener("DOMContentLoaded", function () {
   animation: swim-on-spot 1s ease-in-out infinite; /* Svømmer op og ned kontinuerligt */
 }
 
-
   @keyframes heart-beat {
   0%, 100% {
     transform: scale(1); /* Normal størrelse */
@@ -161,7 +164,6 @@ document.addEventListener("DOMContentLoaded", function () {
     transform: scale(1.2); /* Forstørrelse ved midten af animationen */
   }
 }
-
 .hjerte-animation {
   animation: heart-beat 3s ease-in-out infinite; /* Gentager hjerte-animationen kontinuerligt */
 }
