@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import MainLayout from "../layouts/MainLayout.astro";
 import herobaggrund from "../assets/images/herobaggrund.jpg";
-import heroturtle from "../assets/images/heroturtle.png";
+import heroturtle from "../assets/images/heroturtleny.png";
 ---
 
 <section class="relative grid grid-cols-5 grid-rows-5 w-screen h-screen">
@@ -19,7 +19,7 @@ import heroturtle from "../assets/images/heroturtle.png";
 
     <!-- Background and Hero Content -->
     <Image src={herobaggrund} class="col-start-1 col-span-5 row-start-1 row-span-5 z-0 h-full w-full object-cover" alt="" />
-    <Image src={heroturtle} class="col-start-4 col-span-2 row-start-2 row-span-2 animate-pulse z-10 object-contain" alt="" />
+    <Image src={heroturtle} class="col-start-4 col-span-2 row-start-2 row-span-2 animate-swim z-10 object-contain" alt="" />
     
     <div class="col-span-5 lg:col-start-2 lg:col-span-3 lg:row-start-4 lg:row-span-2 z-20 mt-16">
         <h1 class="text-7xl animate__animated animate__fadeInUp">#SingleUseSucks</h1>
@@ -28,5 +28,29 @@ import heroturtle from "../assets/images/heroturtle.png";
 </section>
 
 
+<style>
+@keyframes swim {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-15vw, -10vh) rotate(15deg);
+  }
+  50% {
+    transform: translate(-7vw, 5vh) rotate(-15deg);
+  }
+  75% {
+    transform: translate(5vw, 10vh) rotate(10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
 
+.animate-swim {
+  animation: swim 10s infinite linear;
+}
+
+
+</style>
 
