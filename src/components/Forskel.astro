@@ -21,23 +21,31 @@ import { animate } from 'motion';
         Hvordan <br> skaber <br> Plastic <br> Change <br> en <br> <span class="text-orange">forskel</span>?
       </h2>
     </header>
-
-    <!-- Brødtekst med parallax -->
+  
+    <!-- Overskrift og brødtekst -->
     <section id="overskrift-og-brodtekst" class="flex flex-col md:flex-row gap-8 md:gap-10 mx-auto mb-10 max-w-screen-xl">
-      <div class="flex-1 mb-6">
-        <p class="text-base md:text-lg mx-auto max-w-xs md:max-w-md lg:max-w-2xl md:mt-20">
+      <!-- Sticky overskrift til venstre -->
+      <div class="flex-1 mb-6 md:ml-10 lg:ml-20 xl:ml-32 sticky top-0 h-screen">
+        <h2 class="text-2xl font-bold md:text-4xl lg:text-8xl ml-20 md:ml-[120px] md:mt-20 md:mb-30 lg:ml-[150px] xl:ml-[180px] mr-12 text-darkblue">
+         
+        </h2>
+      </div>
+  
+      <!-- Brødtekst med parallax effekt -->
+      <div class="flex-1 md:ml-8 lg:ml-60 relative">
+        <p class="text-base md:text-lg mx-auto max-w-xs md:max-w-md lg:max-w-2xl md:mt-20 parallax-scroll">
           Langt størstedelen af din støtte går til <span class="font-bold">hav- og miljøindsatser</span>, hvor vi arbejder for at mindske plastikforurening – både i Danmark og internationalt. Vi gør dette gennem <span class="font-bold">oplysning, vidensdeling, events, undervisning og foredrag.</span> Vores mål er at mobilisere og engagere en større Plastic Changer-bevægelse, der allerede er godt i gang.
           <br><br>
           Vi står også i spidsen for <span class="font-bold">årlige oprydninger</span> i naturen, hvor vi samarbejder med andre organisationer fra hele verden for at skabe en <span class="font-bold">renere planet.</span>
-     <br> <br>         
+          <br><br>
           En lille del af støtten går til administration, hvilket hjælper med at sikre, at Plastic Change har et sted at bo og fungerer optimalt.
-        <br> <br>
-        En del af din støtte går til at lægge <span class="font-bold"> politisk pres for bedre miljølovgivning</span>, der værner om kloden og dens ressourcer. En mindre del bruges til fundraising og indsamlinger, så Plastic Changer-bevægelsen kan fortsætte med at vokse.
+          <br><br>
+          En del af din støtte går til at lægge <span class="font-bold">politisk pres for bedre miljølovgivning</span>, der værner om kloden og dens ressourcer. En mindre del bruges til fundraising og indsamlinger, så Plastic Changer-bevægelsen kan fortsætte med at vokse.
         </p>
       </div>
     </section>
   </article>
-
+  
   <div class="flex justify-between mx-auto max-w-6xl">
     <section id="Farvede bobler med forklarende tekst" class="flex items-start gap-4 md:gap-8 mt-10 md:mt-96 mx-auto">
       <!-- Billede -->
@@ -78,6 +86,14 @@ import { animate } from 'motion';
     // Tjek om fish elementet findes
     if (fish) {
       fish.classList.add("animate__animated", "animate__slideInRight");
+      
+      // Efter slideInRight er færdig, start svømme-animation
+      fish.addEventListener("animationend", function() {
+        fish.classList.remove("animate__slideInRight"); // Fjern indtræden animation
+        setTimeout(() => {
+          fish.classList.add("swim-on-spot"); // Tilføj svømme animation efter en kort pause
+        }, 200); // 200 ms pause før svømme animation starter
+      });
     }
   
     // Tilføj fade in og pulsér animation til hjertet
@@ -92,53 +108,60 @@ import { animate } from 'motion';
       skraldespand.classList.add("animate__animated", "animate__slideInLeft", "animate__subtle-rotate");
     }
   });
-  </script>
+</script>
+
+
+<style>
+  /* Giv plads mellem sticky header og brødtekst */
+  header {
+    margin-bottom: 50px; /* Juster denne værdi efter behov */
+  }
   
-
-  <style>
-    @keyframes subtleRotate {
-      0% {
-        transform: rotate(0deg);
-      }
-      25% {
-        transform: rotate(8deg); /* En lille vippe til højre */
-      }
-      50% {
-        transform: rotate(-8deg); /* En lille vippe til venstre */
-      }
-      100% {
-        transform: rotate(0deg); /* Tilbage til startposition */
-      }
-    }
-    
-    .animate__subtle-rotate {
-      animation: subtleRotate 5s ease-in-out infinite; /* Gentager vippe-animationen */
-    }
-    
-    @keyframes swim {
-      0% { transform: translateX(100%); } /* Starter uden for højre skærm */
-      100% { transform: translateX(0); } /* Ender på sin plads */
-    }
-    
-    .fish-animation {
-      animation: swim 2s ease-in-out forwards; /* Tilføjer svømme-animationen */
-    }
-
-    @keyframes pulse {
-  0% {
-    transform: scale(1);
+  /* Juster brødtekstens parallax-scrolling */
+  #overskrift-og-brodtekst {
+    position: relative;
+    overflow-y: hidden; /* For parallax scroll-effekt */
+    height: 100vh; /* Sørger for at indholdet fylder højden */
   }
-  50% {
-    transform: scale(1.1); /* Forstørrelse til 110% */
+  
+  @keyframes subtleRotate {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(8deg); }
+    50% { transform: rotate(-8deg); }
+    100% { transform: rotate(0deg); }
   }
-  100% {
-    transform: scale(1); /* Tilbage til normal størrelse */
+  
+  .animate__subtle-rotate {
+    animation: subtleRotate 5s ease-in-out infinite; /* Gentager vippe-animationen */
   }
-}
-
-.hjerte-animation {
-  animation: pulse 2s ease-in-out infinite; /* Juster varigheden til 2 sekunder */
-}
-
-    </style>
-    
+  
+  @keyframes swim {
+    0% { transform: translateX(100%); } /* Starter uden for højre skærm */
+    100% { transform: translateX(0); } /* Ender på sin plads */
+  }
+  
+  .fish-animation {
+    animation: swim 2s ease-in-out forwards; /* Tilføjer svømme-animationen */
+  }
+  
+  @keyframes swim-on-spot {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); } /* Svøm op og ned */
+  }
+  
+  .swim-on-spot {
+    animation: swim-on-spot 1s ease-in-out infinite; /* Svømmer op og ned kontinuerligt */
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); } /* Forstørrelse til 110% */
+    100% { transform: scale(1); } /* Tilbage til normal størrelse */
+  }
+  
+  .hjerte-animation {
+    animation: pulse 2s ease-in-out infinite; /* Juster varigheden til 2 sekunder */
+  }
+  </style>
+  
+  
