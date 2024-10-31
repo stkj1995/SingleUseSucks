@@ -3,11 +3,12 @@
 ---
 
 <div class="image-container">
-<img src="src/assets/images/medskrald.webp" class="fade-image" id="image1" alt="">
-<img src="src/assets/images/udenskrald.webp" class="fade-image" id="image2" alt="">
+    <img src="src/assets/images/medskrald.webp" class="fade-image" id="image1" alt="">
+    <img src="src/assets/images/udenskrald.webp" class="fade-image" id="image2" alt="">
 </div>
 
-<style>.image-container {
+<style>
+.image-container {
     position: relative;
     height: 100vh; /* Adjust height as needed */
     overflow: hidden;
@@ -26,19 +27,31 @@
 #image1 {
     opacity: 1; /* Initially visible */
 }
-
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+    const imageContainer = document.querySelector('.image-container');
     const image1 = document.getElementById('image1');
     const image2 = document.getElementById('image2');
 
-    // Initially, show the first image
-    image1.style.opacity = '1';
-    image2.style.opacity = '0';
+    // Only proceed if elements are found
+    if (!imageContainer || !image1 || !image2) return;
 
-    window.addEventListener('scroll', () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Trigger only when most of the container is visible
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.95) {
+                window.addEventListener('scroll', handleScroll);
+            } else {
+                window.removeEventListener('scroll', handleScroll);
+            }
+        });
+    }, { threshold: 0.95 }); // Adjust threshold to ensure full visibility
+
+    observer.observe(imageContainer);
+
+    function handleScroll() {
         const scrollPosition = window.scrollY;
 
         // Change the images based on scroll position
@@ -56,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             image1.style.opacity = '0';
             image2.style.opacity = '1';
         }
-    });
+    }
 });
-
 </script>
+
