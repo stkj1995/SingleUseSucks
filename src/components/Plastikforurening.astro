@@ -12,41 +12,43 @@ import { animate } from 'motion';
 <!-- parallax w-auto bg-fixed h-screen w-100 bg-cover --> 
 
 <!-- div for hele afsnittet -->
- <section class="bg-[#013755] w-screen ">
+ <section class="bg-[#013755] w-screen parallaxgrafik">
 
     <!-- grid med lastbil, skrald og h1 -->
-    <div class="md:grid md:grid-cols-2 md:px-44 md:pt-20 md:gap-16">
+    <div class="md:grid md:grid-cols-2 md:px-44 md:pt-20 md:gap-16 bg-cover bg-center grid grid-cols-12 overflow-hidden">
         <h1 class=" text-end text-white text-[60px] pr-8 pt-28 sticky md:order-1 md:pr-32 md:text-[80px] md:pl-20">Hvad er plastikforuening</h1>
             <!-- container med lastbil og skrald til animation -->
         <div class="">
             <!-- skrald -->
         <div class="">
-            <div class="w-36 relative top-28 left-5 md:w-60 md:relative md:left-28 md:top-36">
-                <Image src={skrald} alt=""/>
+            <div class="w-36 relative top-28 left-5 md:w-60 md:relative md:left-28 md:top-44">
+                <Image src={skrald} alt="" class="col-start-3 col-span-2 parallaxgrafik3" />
             </div>
-            <div class="w-32 relative top-24 left-8 md:w-56 md:relative md:left-12 md:top-24">
-                <Image src={skrald} alt=""/>
+            <div class="w-32 relative top-24 left-8 md:w-56 md:relative md:left-12 md:top-32">
+                <Image src={skrald} alt="" class="col-start-3 col-span-2 parallaxgrafik3"/>
             </div>
         </div>
     
               <!-- lastbil -->
-        <div class="w-64 pt-20 relative md:w-full">
-            <Image src={lastbil} alt="vektorgrafik af lastbil"/>
-           </div>
+        <div class="pt-20 relative md:w-full">
+            <div class="mt-8 md:pb-32 w-full">
+                <Image src={lastbil} alt="vektorgrafik af lastbil" class="col-start-3 col-span-2 parallaxgrafik3"/>
+            </div>
+            </div>
         </div>
     </div>
-    <div class="text-white py-8 px-16 md:grid md:grid-cols-2 md:p-20">
+    <div class="text-white py-8 px-16 md:grid md:grid-cols-2 md:p-20 md:relative md:top-0">
         <p class="text-center font-light md:text-xl">I dag udleder vi <span class="font-bold">8-10 mio ton</span> plastik til havet. Det svarer til <span class="font-bold">1 lastbil</span> med plastik, der tømmes <span class="font-bold">hvert minut!</span></p>
     </div>
 
 
      <!-- datavis 2 flaske -->
- <section class="bg-[#013755] pb-20 pt-16 md:pl-20">
-    <div class="w-[90vw] pl-16 md:grid md:grid-cols-2">
-        <Image src={flaske} alt="plastikflaske med fisk og skrald"/>
+ <section class="parallaxgrafik bg-[#013755] pb-20 pt-16 md:pl-20">
+    <div class="pl-16 mt-8 w-screen h-[550px] grid grid-cols-12 overflow-hidden md:py-32">
+        <Image src={flaske} alt="plastikflaske med fisk og skrald" class="col-start-1 col-span-5 parallaxgrafik1 "/>
     </div>
 
-    <div class="text-white py-8 px-16 md:grid md:grid-cols-2 ">
+    <div class="text-white py-8 px-16 md:grid md:grid-cols-2 md:px-0 ">
         <p class="text-center font-light md:text-xl"> <span class="font-bold">5 % af det plastik</span> vi udleder flyder i overfladen, <span class="font-bold">mens 95% af det resterende plastik</span> ligger længere nede i vandsøjlen. </p>
     </div>
  </section>
@@ -54,7 +56,23 @@ import { animate } from 'motion';
  </section>
 
    
-  
+    <script>
+        import { animate, stagger, inView, scroll, timeline } from "motion";
+        scroll(animate(".parallaxgrafik3", { x: [-1280, 2000], y: [200, 0] }), {
+    target: document.querySelector(".parallaxgrafik"), offset: ["start end", "end start"]
+});
+
+    scroll(animate(".parallaxgrafik1", { y: [1480, -900] }), {
+		target: document.querySelector(".parallaxgrafik"), offset: ["start end", "end start"]
+	});
+
+
+
+
+
+
+    </script>
+
 
 
 
