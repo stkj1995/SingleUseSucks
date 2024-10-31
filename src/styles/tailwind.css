@@ -142,6 +142,7 @@
     transition: background-color 0.3s ease; /* Animering af baggrundsfarven */
     z-index: 1000; /* Sørger for at punkterne er ovenpå andre elementer */
     white-space: nowrap; /* Forhindre tekstbrud */
+    border: 3px solid #ff6f3c; /* Mørkeblå farve */
   }
 
   .progress-point:hover {
