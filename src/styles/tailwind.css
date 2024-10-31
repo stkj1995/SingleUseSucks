@@ -162,7 +162,7 @@
   }
 
   .progress-bar {
-    background: white; /* Hvid baggrund for progress baren */
+    background: #ff6f3c; /* Hvid baggrund for progress baren */
     transform-origin: bottom; /* Animering fra bunden */
     transition: height 0.25s ease; /* Animering ved ændring af højden */
     position: absolute;
