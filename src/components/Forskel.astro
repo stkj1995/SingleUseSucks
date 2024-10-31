@@ -130,24 +130,28 @@ import { animate } from 'motion';
     animation: subtleRotate 5s ease-in-out infinite; /* Gentager vippe-animationen */
   }
   
-  @keyframes swim {
-    0% { transform: translateX(100%); } /* Starter uden for højre skærm */
-    100% { transform: translateX(0); } /* Ender på sin plads */
-  }
-  
-  .fish-animation {
-    animation: swim 2s ease-in-out forwards; /* Tilføjer svømme-animationen */
-  }
+/* Keyframes til svømning ind fra højre */
+@keyframes swim {
+  0% { transform: translateX(100%); } /* Starter uden for højre skærm */
+  100% { transform: translateX(0); } /* Ender på sin plads */
+}
 
-  
-  @keyframes swim-on-spot {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); } /* Svøm op og ned */
-  }
-  
-  .swim-on-spot {
-    animation: swim-on-spot 1s ease-in-out infinite; /* Svømmer op og ned kontinuerligt */
-  }
+/* Klasse til svømme-animationen */
+.fish-animation {
+  animation: swim 3s ease-in-out forwards; /* Tilføjer svømme-animationen */
+}
+
+/* Keyframes til svømning på stedet */
+@keyframes swim-on-spot {
+  0%, 100% { transform: translateY(0); } /* Ingen vertikal bevægelse */
+  50% { transform: translateY(-5px); } /* Let opad bevægelse for at simulere svømning */
+}
+
+/* Klasse til at svømme på stedet */
+.swim-on-spot {
+  animation: swim-on-spot 1s ease-in-out infinite; /* Svømmer op og ned kontinuerligt */
+}
+
 
   @keyframes heart-beat {
   0%, 100% {
