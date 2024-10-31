@@ -1,4 +1,29 @@
 ---
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+import { Image } from 'astro:assets';
+import kop from "../assets/images/kop.svg";
+import tshirt from "../assets/images/tshirt.svg";
+import "../styles/tobii.min.css"; 
+import { animate } from 'motion';
 ---
 
-<!-- bottom, link, animate, motion -->
+<section class="bg-[#E6F6FF] w-screen md:w-screen md:grid md:grid-cols-2 md:px-28 md:pb-28">
+  <div class="flex w-auto px-16 pt-28 md:p-0 md:pl-16">
+    <div class="order-2">
+      <Image src={tshirt} alt="vektorgrafik af tshirt"/>
+    </div>
+    <div class="pt-32 md:pt-44">
+      <Image src={kop} alt="vektorgrafik af kop"/>
+    </div>
+  </div>
+
+  <div class="md:pt-36 md:px-24">
+    <h3 class="text-black text-base text-center px-10 pb-3 pt-10 md:p-0 md:text-xl font-light md:pb-7">
+        Har du lyst til at købe noget unikt merchandise og samtidig støtte en vigtig sag? 
+    </h3>
+    <div class="flex justify-center pb-36 pt-2 transition-transform duration-300 hover:scale-105">
+        <button class="bg-[#FF6F3C] text-[#013755] font-light px-20 py-4 md:px-28 md:py-3 rounded-2xl md:text-xl">Tag et kig her!</button>
+    </div>
+  </div>
+</section>
