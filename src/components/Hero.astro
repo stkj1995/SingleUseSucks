@@ -1,12 +1,16 @@
 ---
-
+import { Image } from 'astro:assets';
+import MainLayout from "../layouts/MainLayout.astro";
+import herobaggrund from "../assets/images/herobaggrund.jpg";
+import heroturtle from "../assets/images/heroturtle.png";
 ---
 
 
 	<section class="grid grid-cols-5 grid-rows-5  w-full w-screen">
 		
-		<img src="src/assets/images/herobaggrund.jpg" class="col-start-1 col-span-5 row-start-1 row-span-5 z-0 h-screen">
-		<img src="src/assets/images/heroturtle.png" class="col-start-4 col-span-2 row-start-2 row-span-2 animate-pulse z-10 object-contain">
+		<Image src={herobaggrund}  class="col-start-1 col-span-5 row-start-1 row-span-5 z-0 h-screen" alt="" />
+		<Image src={heroturtle}  class="col-start-4 col-span-2 row-start-2 row-span-2 animate-pulse z-10 object-contain" alt="" />
+		
 		
 		<div class="col-span-5 lg:col-start-2 lg:col-span-3 lg:row-start-3 lg:row-span-2 z-20">
 			<h1 class="text-7xl animate__animated animate__fadeInUp">#SingleUseSucks</h1> <br>
