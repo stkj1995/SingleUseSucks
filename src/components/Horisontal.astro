@@ -25,8 +25,8 @@ import "../styles/tobii.min.css";
 <!-- Baggrundsfarve -->
 <article class="bg-darkblue w-screen md:w-screen mx-auto text-white">
     <section id="overskrift-og-brodtekst" class="flex flex-col md:flex-row gap-8 md:gap-10 mx-auto max-w-screen-xl">  
-        <div class="flex-1 mb-6 flex justify-center md:justify-end">
-            <h2 class="text-2xl font-bold md:text-4xl lg:text-8xl text-center md:text-right ml-10 mr-10 md:mt-20">
+        <div class="flex-1 mb-6 flex justify-start md:justify-end">
+            <h2 class="text-2xl font-bold md:text-4xl lg:text-8xl md:text-right ml-10 mr-10 md:mt-20">
                 Hvordan kan du som forbruger selv bidrage?
             </h2>
         </div>
@@ -38,45 +38,44 @@ import "../styles/tobii.min.css";
                         <Image src={tal1} class="w-5/6" alt="foto" />
                     </figure>
                     <li class="pl-0 flex w-[100vw] items-start justify-center flex-col">
-                        <figcaption class="pl-4 w-1/3 md:mb-14">
-                            World Cleanup Day er et globalt handlekraftigt fællesskab med et formål om at gøre verden renere. <br> I 2022 deltog flere end <span class="font-bold">15 mio mennesker fra 190 lande</span>, og tilsammen blev der samlet <span class="font-bold">min. 60 tons affald</span>. <br><br> Vær en del af World Cleanup Day, og vær med til at gøre en forskel.
+                        <figcaption class="pl-4 w-full md:w-1/3 md:mb-14">
+                            World Cleanup Day er et globalt handlekraftigt fællesskab med et formål om at gøre verden renere. <br /> I 2022 deltog flere end <span class="font-bold">15 mio mennesker fra 190 lande</span>, og tilsammen blev der samlet <span class="font-bold">min. 60 tons affald</span>. <br /><br />Vær en del af World Cleanup Day, og vær med til at gøre en forskel.
                         </figcaption>
                         <figure class="flex flex-row max-w-[300px]">
                             <Image src={worldcleanuplogo} class="w-5/6 md:mb-8" alt="foto" />
                         </figure>
                         <NewButton className="ml-16">Deltag her</NewButton>
-
                     </li>
-                    
+        
                     <figure class="flex flex-row max-w-[300px]">
                         <Image src={tal6hvid} class="md:w-44 md:h-44 md:mt-52" alt="foto" />
                     </figure>
-                    <li class="pl-0 flex w-[100vw] items-start justify-center flex-col overflow-hidden">
-                        <h2 class="pl-4 text-5xl w-1/3 text-white text-wrap">
-                          gode <br> tips <br> mod <br> plastikspild
-                        </h2>                       
+                    <li class="pl-0 flex w-[100vw] items-start justify-center flex-col">
+                        <h2 class="pl-4 text-4xl md:text-5xl w-full md:w-1/3 text-white text-wrap">
+                            gode <br /> tips <br /> mod <br /> plastikspild
+                        </h2>
                     </li>
-                
+        
                     <section class="tal1og2">
-                        <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
-                            <figure class="flex flex-row items-start max-w-[800px] ">
+                        <li class="flex w-[100vw] items-start justify-center flex-col flex-grow-0 flex-shrink-0 flex-auto">
+                            <figure class="flex flex-row items-start max-w-[300px] ">
                                 <!-- Tal 1 til venstre -->
                                 <div class="flex flex-col items-start">
-                                    <Image src={tal1} class="md:w-16 md:h-38 md:ml-5 mr-20" alt="foto" />
+                                    <Image src={tal1} class="md:w-16 md:h-38 md:ml-10 mr-20" alt="foto" />
                                 </div>
-                                
+        
                                 <!-- Pose til højre -->
                                 <div class="flex flex-col items-start pl-4">
                                     <Image src={pose} class="md:w-20 md:h-32" alt="Indkøbspose" />
-                                    <figcaption class="w-1/3 text-nowrap" >
-                                        <span class="font-bold">Dit indkøb</span> <br>
+                                    <figcaption class="w-full md:w-1/3 text-nowrap mt-10">
+                                        <span class="font-bold">Dit indkøb</span> <br />
                                         <span class="font-roboto-light">Tag mulepose med og sig nej tak til plastikposer</span>
                                     </figcaption>
                                 </div>
                             </figure>
                         </li>
-                        
-                        <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto mt-10">
+        
+                        <li class="flex w-[100vw] items-start justify-center flex-col flex-grow-0 flex-shrink-0 flex-auto mt-10">
                             <figure class="flex flex-row items-start max-w-[300px] mt-10">
                                 <!-- Tal 2 til venstre -->
                                 <div class="flex flex-col items-start">
@@ -100,84 +99,85 @@ import "../styles/tobii.min.css";
                             </figure>
                         </li>
                     </section>
-
+        
                     <section class="tal3og4">
-                        <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
+                        <li class="flex w-[100vw] items-start justify-center flex-col flex-grow-0 flex-shrink-0 flex-auto">
                             <figure class="flex flex-row items-start max-w-[800px] mt-12">
                                 <!-- Tal 3 til venstre -->
                                 <div class="flex flex-col items-start">
                                     <Image src={tal3} class="md:w-32 md:h-44 md:ml-5" alt="foto" />
                                 </div>
-                                
+        
                                 <!-- Mælk til højre -->
                                 <div class="flex flex-col items-start pl-4">
                                     <Image src={maelk} class="md:w-16 md:h-32" alt="Mælk" />
-                                    <figcaption class="w-1/3 text-nowrap" >
-                                        <span class="font-bold">Din mælk</span> <br>
+                                    <figcaption class="w-full md:w-1/3 text-nowrap">
+                                        <span class="font-bold">Din mælk</span> <br />
                                         <span class="font-roboto-light">Køb mælk uden skruelåg</span>
                                     </figcaption>
                                 </div>
                             </figure>
                         </li>
-                        
-                        <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto mt-10">
-                            <figure class="flex flex-row items-center max-w-[300px]">
+        
+                        <li class="flex w-[100vw] items-start justify-center flex-col flex-grow-0 flex-shrink-0 flex-auto mt-10">
+                            <figure class="flex flex-row items-start max-w-[300px] justify-between">
                                 <!-- Tal 4 til venstre -->
                                 <div class="flex flex-col items-start">
                                     <Image src={tal4} class="md:w-64 md:h-56 md:ml-5" alt="foto" />
                                 </div>
                         
                                 <!-- Balloner og smiley -->
-                                <div class="flex flex-col items-center">
-                                     <Image src={sadsmiley} class="md:w-12 md:h-12 ml-20" alt="Trist smiley" />
-                                     <Image src={balloons} class="md:w-22 md:h-22 ml-40" alt="Balloner" />
+                                <div class="flex flex-col items-center justify-center">
+                                    <Image src={balloons} class="md:w-22 md:h-22" alt="Balloner" />
+                                    <Image src={sadsmiley} class="md:w-12 md:h-12 mt-2" alt="Trist smiley" />
                                 </div>
                             </figure>
                         
                             <!-- Figcaption skal nu være under figure -->
-                            <figcaption class="pl-4 w-1/3 text-nowrap mt-2 text-center">
-                                <span class="font-bold">Din fest</span> <br>
+                            <figcaption class="pl-4 w-full md:w-1/3 text-nowrap mt-2 text-left">
+                                <span class="font-bold">Din fest</span> <br />
                                 <span class="font-roboto-light">Drop engangsservice, balloner og sugerør</span>
                             </figcaption>
                         </li>
                     </section>
-
+                        
+        
                     <section class="tal5og6">
-                        <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
+                        <li class="flex w-[100vw] items-start justify-center flex-col flex-grow-0 flex-shrink-0 flex-auto">
                             <figure class="flex flex-row items-start max-w-[800px] mt-12">
                                 <!-- Tal 5 til venstre -->
                                 <div class="flex flex-col items-start">
-                                    <Image src={tal5} class="md:w-32 md:h-44 md:ml-5" alt="foto" />
+                                    <Image src={tal5} class="md:w-32 md:h-44 md:ml-12" alt="foto" />
                                 </div>
-                                
+        
                                 <!-- Tshirt til højre -->
                                 <div class="flex flex-col items-start pl-4">
-                                    <Image src={tshirt} class="md:w-14 md:h-24" alt="Tshirt" />
-                                    <figcaption class="w-1/3 text-nowrap" >
-                                        <span class="font-bold">Din tøjvask</span> <br>
+                                    <Image src={tshirt} class="md:w-40 md:h-36" alt="Tshirt" />
+                                    <figcaption class="w-full md:w-1/3 text-nowrap">
+                                        <span class="font-bold">Din tøjvask</span> <br />
                                         <span class="font-roboto-light">Fyld maskinen, så du slider mindre på tøjet</span>
                                     </figcaption>
                                 </div>
                             </figure>
                         </li>
-                        
-                        <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
+        
+                        <li class="flex w-[100vw] items-start justify-center flex-col flex-grow-0 flex-shrink-0 flex-auto">
                             <figure class="flex flex-row items-center max-w-[300px] mt-10">
                                 <!-- Tal 6 til venstre -->
                                 <div class="flex flex-col items-start">
-                                    <Image src={tal6} class="md:w-32 md:h-44 md:ml-5" alt="foto" />
+                                    <Image src={tal6} class="md:w-44 md:h-46 md:ml-5" alt="foto" />
                                 </div>
-                        
+        
                                 <!-- Plejeprodukter -->
                                 <div class="flex flex-col items-center">
-                                    <Image src={creme} class="md:w-12 md:h-12 ml-4" alt="Balloner" />
+                                    <Image src={creme} class="md:w-30 md:h-30" alt="creme" />
                                 </div>
                             </figure>
-                        
+        
                             <!-- Figcaption skal nu være under figure -->
-                            <figcaption class="pl-4 w-1/3 text-nowrap mt-2 text-center">
-                                <span class="font-bold">Dine plejeprodukter</span> <br>
-                                <span class="font-roboto-light">Køb i store beholdere frem for mange små</span>
+                            <figcaption class="pl-4 w-full md:w-1/3 text-nowrap mt-2 text-center">
+                                <span class="font-bold">Dine plejeprodukter</span> <br />
+                                <span class="font-roboto-light">Vælg produkter uden mikroplast</span>
                             </figcaption>
                         </li>
                     </section>
