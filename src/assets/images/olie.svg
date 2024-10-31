@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Lag_26" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 207 237">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        stroke: #29abe2;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-3, .cls-4, .cls-5 {
+        stroke-width: 6px;
+      }
+
+      .cls-1, .cls-5 {
+        fill: #29abe2;
+      }
+
+      .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2, .cls-6 {
+        stroke-width: 8px;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        stroke: #000;
+      }
+
+      .cls-6 {
+        fill: #2180ff;
+        opacity: .5;
+        stroke: #2180ff;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" x="91" y="26" width="76" height="39" rx="8.36" ry="8.36"/>
+  <rect class="cls-4" x="45" y="28" width="30" height="14" rx="4.4" ry="4.4"/>
+  <rect class="cls-1" x="28" y="65" width="151" height="151" rx="15.79" ry="15.79"/>
+  <rect class="cls-1" x="28" y="44" width="62" height="58" rx="9.49" ry="9.49"/>
+  <rect class="cls-6" x="34" y="46" width="29" height="165" rx="11.37" ry="11.37"/>
+  <rect class="cls-1" x="167" y="51" width="12" height="35" rx="2.13" ry="2.13"/>
+  <rect class="cls-3" x="42.87" y="81.43" width="119.13" height="119.57" rx="15.79" ry="15.79"/>
+  <path class="cls-4" d="M103,112c-1.69.04-1.65,5.06-5,11-3.56,6.32-6.68,6.1-11,12-1.96,2.67-6.7,9.14-6,17,.71,7.98,6.98,17,17,19,8.04,1.61,16.53-1.7,21-8,6.53-9.2,1.81-20.98,1-23-3.37-8.41-8.44-8.6-13-20-1.7-4.23-2.53-8.04-4-8Z"/>
+  <path class="cls-5" d="M92,133c1.01.48-2.08,5.11-1,12,1.19,7.58,6.62,12.7,8,14,6.22,5.86,12.22,6.14,12,8-.25,2.09-8.19,4.43-15,2-8.15-2.91-13.69-12.29-13-21,.7-8.83,7.7-15.62,9-15Z"/>
+</svg>
