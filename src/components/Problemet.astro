@@ -10,7 +10,7 @@ import olie from "../assets/images/olie.svg";
 ---
 <section class="bg-lightblue h-screen lg:flex w-screen">
   <div class="inviewh1">
-  <h2 class=" lg:text-8xl text-darkblue w-96 ml-20 pt-28">
+  <h2 class=" text-5xl lg:text-8xl text-darkblue w-96 ml-20 pt-28">
       Hvad er problemet med plastik-forurening? 
   </h2>
 </div>
@@ -19,33 +19,33 @@ import olie from "../assets/images/olie.svg";
   <div class="center">Plastik</div>
   
   <div class="item item1">
-      <Image src={turtle}  class="w-40" alt="" />
-    <p>Truer havmiljøet</p>
+      <Image src={turtle}  class="w-24 md:w-40" alt="" />
+    <p class="text-sm md:text-lg">Truer havmiljøet</p>
   </div>
 
   <div class="item item2">
-      <Image src={mikroplast}  class="w-40" alt="" />
-    <p>Forsvinder ikke, men bliver til mikroplast</p>
+      <Image src={mikroplast}  class="w-24 md:w-40" alt="" />
+    <p class="text-sm md:text-lg">Forsvinder ikke, men bliver til mikroplast</p>
   </div>
   
   <div class="item item3">
-    <Image src={toxic}  class="w-40" alt="" />
-    <p>Indeholder skadelige kemikalier</p>
+    <Image src={toxic}  class="w-24 md:w-40" alt="" />
+    <p class="text-sm md:text-lg">Indeholder skadelige kemikalier</p>
   </div>
   
   <div class="item item4">
-    <Image src={industri}  class="w-40" alt="" />
-    <p>Bidrager til en voksende andel af CO2 regnskabet</p>
+    <Image src={industri}  class="w-24 md:w-40" alt="" />
+    <p class="text-sm md:text-lg">Bidrager til en voksende andel af CO2 regnskabet</p>
   </div>
   
   <div class="item item5">
-    <Image src={mad}  class="w-40" alt="" />
-    <p>Kommer ind i fødekæden</p>
+    <Image src={mad}  class="w-24 md:w-40" alt="" />
+    <p class="text-sm md:text-lg">Kommer ind i fødekæden</p>
   </div>
   
   <div class="item item6">
-    <Image src={olie}  class="w-40" alt="" />
-    <p>Lavet af olie</p>
+    <Image src={olie}  class="w-24 md:w-40" alt="" />
+    <p class="text-sm md:text-lg">Lavet af olie</p>
   </div>
 </div>
 </section>
@@ -95,6 +95,31 @@ font-weight: lighter;
   .item img {
     margin-bottom: 10px;
   }
+ /* Responsive adjustments for circular layout */
+ @media (max-width: 768px) {
+    .container {
+      width: 80%;
+      height: 60%;
+    }
+
+    .center {
+      font-size: 18px;
+    }
+
+    .item {
+      width: 20%; /* Smaller size for mobile */
+      transform: translateY(15px);
+    }
+
+    /* Adjust positions for a smaller circle */
+    .item1 { top: 12%; left: 50%; transform: translate(-50%, -15px); }
+    .item2 { top: 35%; left: 70%; transform: translate(-15px, -50%); }
+    .item3 { top:55%; left: 77%; transform: translate(-50%, 15px); }
+    .item4 { bottom: 1%; left: 50%; transform: translate(-50%, 15px); }
+    .item5 { bottom: 5%; left: 10%; transform: translate(15px, -50%); }
+    .item6 { top: 20%; left: 23%; transform: translate(-50%, -15px); }
+  }
+
 </style>
 
 
