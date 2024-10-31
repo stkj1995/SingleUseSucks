@@ -1,7 +1,15 @@
 ---
+import { Image } from 'astro:assets';
+import MainLayout from "../layouts/MainLayout.astro";
+import turtle from "../assets/images/turtle.svg";
+import mikroplast from "../assets/images/mikroplastik.svg";
+import toxic from "../assets/images/toxic.svg";
+import industri from "../assets/images/industri.svg";
+import mad from "../assets/images/mad.svg";
+import olie from "../assets/images/olie.svg";
 ---
 
-<section class="bg-lightblue h-screen flex w-full w-screen">
+<section class="bg-lightblue h-screen flex">
     <h2 class=" lg:text-8xl text-darkblue w-96 ml-20 pt-28">
         Hvad er problemet med plastik-forurening? 
     </h2>
@@ -10,36 +18,37 @@
     <div class="center">Plastik</div>
     
     <div class="item item1">
-        <img src="src/assets/images/turtle.svg" class="w-40" alt="">
+        <Image src={turtle}  class="w-40" alt="" />
       <p>Truer havmiljøet</p>
     </div>
 
     <div class="item item2">
-        <img src="src/assets/images/mikroplastik.svg" class="w-40" alt="">
+        <Image src={mikroplast}  class="w-40" alt="" />
       <p>Forsvinder ikke, men bliver til mikroplast</p>
     </div>
     
     <div class="item item3">
-        <img src="src/assets/images/toxic.svg" class="w-40" alt="">
+      <Image src={toxic}  class="w-40" alt="" />
       <p>Indeholder skadelige kemikalier</p>
     </div>
     
     <div class="item item4">
-        <img src="src/assets/images/industri.svg" class="w-40" alt="">
+      <Image src={industri}  class="w-40" alt="" />
       <p>Bidrager til en voksende andel af CO2 regnskabet</p>
     </div>
     
     <div class="item item5">
-        <img src="src/assets/images/mad.svg" class="w-40" alt="">
+      <Image src={mad}  class="w-40" alt="" />
       <p>Kommer ind i fødekæden</p>
     </div>
     
     <div class="item item6">
-        <img src="src/assets/images/olie.svg" class="w-40" alt="">
+      <Image src={olie}  class="w-40" alt="" />
       <p>Lavet af olie</p>
     </div>
   </div>
 </section>
+
 
 
   <style>
