@@ -9,9 +9,11 @@ import mad from "../assets/images/mad.svg";
 import olie from "../assets/images/olie.svg";
 ---
 <section class="bg-lightblue h-screen flex w-screen">
+  <div class="inviewh1">
   <h2 class=" lg:text-8xl text-darkblue w-96 ml-20 pt-28">
       Hvad er problemet med plastik-forurening? 
   </h2>
+</div>
 
 <div class="container">
   <div class="center">Plastik</div>
@@ -98,9 +100,6 @@ font-weight: lighter;
 
 <script>
 
-
-
-
   const items = document.querySelectorAll('.item');
 
   const observer = new IntersectionObserver(entries => {
@@ -120,4 +119,15 @@ font-weight: lighter;
   items.forEach(item => {
     observer.observe(item);
   });
+
+
+  import { inView } from "motion";
+	
+	const elementmedanimation1 = document.querySelector(".inviewh1");
+	
+	inView(elementmedanimation1, () => {
+	
+	elementmedanimation1.classList.add("animate__animated", "animate__fadeInUp");
+	
+	}); 
 </script>
