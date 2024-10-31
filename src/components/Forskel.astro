@@ -6,12 +6,12 @@ import "../styles/tobii.min.css";
 import { animate } from 'motion';
 ---
 <!-- Bubbles Container -->
-<div class="fixed top-1/2 right-0 transform -translate-y-1/2 flex flex-col items-end z-10">
+<!-- <div class="fixed top-1/2 right-0 transform -translate-y-1/2 flex flex-col items-end z-10">
   <img src="/boble_v.svg" alt="Bubbles" class="w-16 h-16 animate-pulse" /> 
   <img src="/boble_h.svg" alt="Bubbles" class="w-20 h-20 animate-pulse" /> 
   <img src="/boble_v.svg" alt="Bubbles" class="w-16 h-16 animate-pulse" />  
   <img src="/boble_h.svg" alt="Bubbles" class="w-16 h-16 animate-pulse" /> 
-</div>
+</div> -->
 
 <main class="bg-lightblue w-screen mx-auto">
   <article class="container mx-auto px-5 py-5">
@@ -42,52 +42,90 @@ import { animate } from 'motion';
     <section id="animationer" class="space-y-8 md:space-y-10 p-4 md:p-10 md:ml-44 flex-1">
       <!-- Animation 1: Fisk -->
       <div class="flex items-center space-x-4">
-        <img src="/fisk_datavis_70.webp" alt="Fisk" class="w-2/3 h-2/3 md:w-70p md:h-70p ml-10 lg:ml-32 xl:ml-40" />
+        <img src="/fisk_datavis_70.webp" alt="Fisk" class="w-[250px] sm:w-[350px] md:w-[450px] ml-32 lg:ml-44 xl:ml-40 fish-animation" />
       </div>
-      
+
       <!-- Animation 2: Hjerte -->
       <div class="flex items-center space-x-4">
-        <img src="/hjerte_datavis_22.webp" alt="Hjerte" class="w-1/3 h-1/3 md:w-22p md:h-22p ml-10 lg:ml-32 xl:ml-40" />
+        <img src="/hjerte_datavis_22.webp" alt="Hjerte" class="w-[100px] sm:w-[150px] md:w-[200px] md:w-20p md:h-22p ml-20 lg:ml-32 xl:ml-40 hjerte-animation" />
       </div>
 
       <!-- Animation 3: Skraldespand -->
       <div class="flex items-center space-x-4">
-        <img src="/skrald_datavis_8.webp" alt="Skraldespand" class="w-1/5 h-1/5 md:w-8p md:h-8p ml-52 lg:ml-64 xl:ml-72" />
+        <img src="/skrald_datavis_8.webp" alt="Skraldespand" class="w-[60px] sm:w-[80px] md:w-[100px] md:w-10p md:h-8p ml-52 lg:ml-64 xl:ml-72 skraldespand-animation" />
       </div>
     </section>
-
 </main>
 
 <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Tilføj svømmeanimation til fisken
+    const fish = document.querySelector(".fish-animation");
+    
+    // Tjek om fish elementet findes
+    if (fish) {
+      fish.classList.add("animate__animated", "animate__slideInRight");
+    }
+  
+    // Tilføj fade in og pulsér animation til hjertet
+    const heart = document.querySelector(".hjerte-animation");
+    if (heart) {
+      heart.classList.add("animate__animated", "animate__fadeIn", "animate__infinite", "animate__pulse");
+    }
+  
+    // Tilføj flyv ind og vippe animation til skraldespanden
+    const skraldespand = document.querySelector(".skraldespand-animation");
+    if (skraldespand) {
+      skraldespand.classList.add("animate__animated", "animate__slideInLeft", "animate__subtle-rotate");
+    }
+  });
+  </script>
+  
 
-</script>
+  <style>
+    @keyframes subtleRotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(8deg); /* En lille vippe til højre */
+      }
+      50% {
+        transform: rotate(-8deg); /* En lille vippe til venstre */
+      }
+      100% {
+        transform: rotate(0deg); /* Tilbage til startposition */
+      }
+    }
+    
+    .animate__subtle-rotate {
+      animation: subtleRotate 5s ease-in-out infinite; /* Gentager vippe-animationen */
+    }
+    
+    @keyframes swim {
+      0% { transform: translateX(100%); } /* Starter uden for højre skærm */
+      100% { transform: translateX(0); } /* Ender på sin plads */
+    }
+    
+    .fish-animation {
+      animation: swim 2s ease-in-out forwards; /* Tilføjer svømme-animationen */
+    }
 
-<style>
-@keyframes subtleRotate {
+    @keyframes pulse {
   0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(8deg); /* En lille vippe til højre */
+    transform: scale(1);
   }
   50% {
-    transform: rotate(-8deg); /* En lille vippe til venstre */
+    transform: scale(1.1); /* Forstørrelse til 110% */
   }
   100% {
-    transform: rotate(0deg); /* Tilbage til startposition */
+    transform: scale(1); /* Tilbage til normal størrelse */
   }
 }
-.animate__subtle-rotate {
-  animation: subtleRotate 1s ease forwards; /* Juster varigheden efter behov */
+
+.hjerte-animation {
+  animation: pulse 2s ease-in-out infinite; /* Juster varigheden til 2 sekunder */
 }
 
-@keyframes swim {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-.fish-animation {
-  animation: swim 1.5s ease-in-out infinite;
-}
-</style>
+    </style>
+    
