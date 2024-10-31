@@ -33,6 +33,18 @@ import medskrald from "../assets/images/medskrald.webp";
 #image1 {
     opacity: 1; /* Initially visible */
 }
+
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .image-container {
+      height: 51.6vh; /* Adjust to reduce height on mobile */
+    }
+
+    .fade-image {
+      object-fit: contain; /* Keeps image aspect ratio on smaller screens */
+    }
+  }
 </style>
 
 <script>
