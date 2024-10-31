@@ -58,40 +58,40 @@ import "../styles/tobii.min.css";
         
                     <section class="tal1og2">
                         <li class="flex w-[100vw] items-start justify-center flex-col flex-grow-0 flex-shrink-0 flex-auto">
-                            <figure class="flex flex-row items-start max-w-[300px] ">
+                            <figure class="flex flex-row items-start max-w-[300px]">
                                 <!-- Tal 1 til venstre -->
-                                <div class="flex flex-col items-start">
-                                    <Image src={tal1} class="md:w-16 md:h-38 md:ml-10 mr-20" alt="foto" />
-                                </div>
-        
-                                <!-- Pose til højre -->
                                 <div class="flex flex-col items-start pl-4">
-                                    <Image src={pose} class="md:w-20 md:h-32" alt="Indkøbspose" />
-                                    <figcaption class="w-full md:w-1/3 text-nowrap mt-10">
+                                    <Image src={tal1} class="md:w-16 md:h-38 md:ml-14 mr-14" alt="foto" />
+                                </div>
+                    
+                                <!-- Pose til højre -->
+                                <div class="flex flex-col items-start pl-8">
+                                    <Image src={pose} class="md:w-20 md:h-36 ml-24" alt="Indkøbspose" />
+                                    <figcaption class="w-full md:w-1/3 text-nowrap mt-5">
                                         <span class="font-bold">Dit indkøb</span> <br />
                                         <span class="font-roboto-light">Tag mulepose med og sig nej tak til plastikposer</span>
                                     </figcaption>
                                 </div>
                             </figure>
                         </li>
-        
+                    
                         <li class="flex w-[100vw] items-start justify-center flex-col flex-grow-0 flex-shrink-0 flex-auto mt-10">
                             <figure class="flex flex-row items-start max-w-[300px] mt-10">
                                 <!-- Tal 2 til venstre -->
                                 <div class="flex flex-col items-start">
-                                    <Image src={tal2} class="md:w-40 md:h-44 md:ml-5" alt="foto" />
+                                    <Image src={tal2} class="md:w-30 md:h-38 md:ml-10 mr-24 mt-12" alt="foto" /> <!-- Ensartet styling -->
                                 </div>
-                                
+                    
                                 <!-- Drikkedunk, flueben og figcaption til højre -->
-                                <div class="flex flex-col items-start pl-8">
+                                <div class="flex flex-col items-start pl-14">
                                     <!-- Drikkedunk og flueben -->
-                                    <div class="flex flex-col items-center">
-                                        <Image src={flueben} class="md:w-12 md:h-12 ml-4" alt="Flueben" />
+                                    <div class="flex flex-col items-center pl-10">
+                                        <Image src={flueben} class="md:w-12 md:h-12 ml-20" alt="Flueben" />
                                         <Image src={drikkedrunk} class="md:w-11 md:h-36" alt="Drikkedunk" />
                                     </div>
-                                    
+                    
                                     <!-- Figcaption under billeder -->
-                                    <figcaption class="mt-2 text-start">
+                                    <figcaption class="w-full md:w-1/3 text-nowrap mt-5">
                                         <span class="font-bold">Din vandflaske</span> <br>
                                         <span class="font-roboto-light">Brug drikkedunk og undgå købevand</span>
                                     </figcaption>
@@ -105,13 +105,13 @@ import "../styles/tobii.min.css";
                             <figure class="flex flex-row items-start max-w-[800px] mt-12">
                                 <!-- Tal 3 til venstre -->
                                 <div class="flex flex-col items-start">
-                                    <Image src={tal3} class="md:w-32 md:h-44 md:ml-5" alt="foto" />
+                                    <Image src={tal3} class="md:w-36 md:h-48 md:ml-5 mt-5" alt="foto" />
                                 </div>
         
                                 <!-- Mælk til højre -->
                                 <div class="flex flex-col items-start pl-4">
                                     <Image src={maelk} class="md:w-16 md:h-32" alt="Mælk" />
-                                    <figcaption class="w-full md:w-1/3 text-nowrap">
+                                    <figcaption class="w-full md:w-1/3 text-nowrap mt-5">
                                         <span class="font-bold">Din mælk</span> <br />
                                         <span class="font-roboto-light">Køb mælk uden skruelåg</span>
                                     </figcaption>
@@ -119,22 +119,22 @@ import "../styles/tobii.min.css";
                             </figure>
                         </li>
         
-                        <li class="flex w-[100vw] items-start justify-center flex-col flex-grow-0 flex-shrink-0 flex-auto mt-10">
+                        <li class="flex w-[100vw] items-start justify-center flex-col flex-grow-0 flex-shrink-0 flex-auto">
                             <figure class="flex flex-row items-start max-w-[300px] justify-between">
                                 <!-- Tal 4 til venstre -->
                                 <div class="flex flex-col items-start">
-                                    <Image src={tal4} class="md:w-64 md:h-56 md:ml-5" alt="foto" />
+                                    <Image src={tal4} class="md:w-64 md:h-56 mr-20 mt-20" alt="foto" />
                                 </div>
                         
                                 <!-- Balloner og smiley -->
-                                <div class="flex flex-col items-center justify-center">
+                                <div class="flex flex-col items-center justify-center mt-20">
                                     <Image src={balloons} class="md:w-22 md:h-22" alt="Balloner" />
                                     <Image src={sadsmiley} class="md:w-12 md:h-12 mt-2" alt="Trist smiley" />
                                 </div>
                             </figure>
                         
                             <!-- Figcaption skal nu være under figure -->
-                            <figcaption class="pl-4 w-full md:w-1/3 text-nowrap mt-2 text-left">
+                            <figcaption class="pl-4 w-full md:w-1/3 text-nowrap md:ml-40 text-left">
                                 <span class="font-bold">Din fest</span> <br />
                                 <span class="font-roboto-light">Drop engangsservice, balloner og sugerør</span>
                             </figcaption>
@@ -153,7 +153,7 @@ import "../styles/tobii.min.css";
                                 <!-- Tshirt til højre -->
                                 <div class="flex flex-col items-start pl-4">
                                     <Image src={tshirt} class="md:w-40 md:h-36" alt="Tshirt" />
-                                    <figcaption class="w-full md:w-1/3 text-nowrap">
+                                    <figcaption class="w-full md:w-1/3 text-nowrap md:ml-6 mt-5">
                                         <span class="font-bold">Din tøjvask</span> <br />
                                         <span class="font-roboto-light">Fyld maskinen, så du slider mindre på tøjet</span>
                                     </figcaption>
@@ -165,17 +165,17 @@ import "../styles/tobii.min.css";
                             <figure class="flex flex-row items-center max-w-[300px] mt-10">
                                 <!-- Tal 6 til venstre -->
                                 <div class="flex flex-col items-start">
-                                    <Image src={tal6} class="md:w-44 md:h-46 md:ml-5" alt="foto" />
+                                    <Image src={tal6} class="md:w-46 md:h-46 md:ml-5" alt="foto" />
                                 </div>
         
                                 <!-- Plejeprodukter -->
-                                <div class="flex flex-col items-center">
-                                    <Image src={creme} class="md:w-30 md:h-30" alt="creme" />
+                                <div class="flex flex-col items-start">
+                                    <Image src={creme} class="md:w-60 md:h-32 md:ml-11" alt="creme" />
                                 </div>
                             </figure>
         
                             <!-- Figcaption skal nu være under figure -->
-                            <figcaption class="pl-4 w-full md:w-1/3 text-nowrap mt-2 text-center">
+                            <figcaption class="pl-4 w-full md:w-1/3 text-nowrap mt-2 text-left md:ml-48">
                                 <span class="font-bold">Dine plejeprodukter</span> <br />
                                 <span class="font-roboto-light">Vælg produkter uden mikroplast</span>
                             </figcaption>
