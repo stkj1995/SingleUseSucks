@@ -1,79 +1,72 @@
----
-import { Image } from 'astro:assets';
-import MainLayout from "../layouts/MainLayout.astro";
-import formularbaggrund from "../assets/images/formularbaggrund.jpg";
----
-
 <section class=" w-screen">
 
-    <div class="margin"></div>
-
-    <section class="parallax flex flex-col items-center">
-        <div class="parallax-inner">
-            <div class="bg-white opacity-95 max-w-md p-10 rounded-md mx-auto flex flex-col">
-                <h1 class="text-darkblue text-7xl text-center">Bidrag her</h1>
-                <p class="mb-10 text-center">Du kan beskytte naturen, dyrelivet og vores børn mod plastik, ved at bidrage til os herunder.</p>
-                <div class="flex gap-16 mb-10">
-            <div class="flex gap-5">
-                <input class="p-3 border-orange" type="radio" id="html" name="månedligt" value="HTML">
-                <label class="text-orange" for="html">Månedligt</label><br>
-            </div>
-            <div class="flex gap-5">
-                <input class="p-3 border-orange" type="radio" id="css" name="engang" value="CSS">
-                <label for="css">Èn gang</label><br>
-            </div>
-            </div>
-            <div class="flex  gap-16">
-                <div class="flex flex-col text-center gap-3">
-                    <input class="p-10 border-orange" type="radio" id="css" name="engang" value="CSS">
-                    <label for="css">50</label><br>
-                </div>
-                <div class="flex flex-col text-center gap-3">
-                <input class="p-10 border-orange" type="radio" id="css" name="engang" value="CSS">
-                <label for="css">75</label><br>
-            </div>
-                <div class="flex flex-col text-center gap-3">
-                <input class="p-10 border-orange" type="radio" id="css" name="engang" value="CSS">
-                <label for="css">125</label><br>
-            </div>
-            </div>
-                <input class="rounded-2xl text-darkblue/80 p-4 border-orange" type="text" id="fname" name="fname" placeholder="Andet beløb"><br>
-                <button class="bg-[#FF6F3C] text-[#013755] font-light px-20 py-4 md:px-28 md:py-3 rounded-2xl md:text-3xl transition-transform duration-300 hover:text-white hover:scale-105">Donér nu</button>
-        </div>
-
-
-
-
-        <div class="parallax-inner">
-           <div class="bg-white opacity-95 max-w-md p-10 rounded-md mx-auto flex flex-col">
-                <h1 class="text-darkblue text-7xl text-center">Skriv under</h1>
-                <p class=" mb-7 text-center">Kæmp sammen med os, og underskriv en global plastiktraktat, der lægger et loft over produktion af plastik.</p>
-                <p id="count-up" class="text-orange text-center text-4xl mb-3">0</p>
-                <p class="mb-8 text-center">har allerede skrevet under</p>
-                <input class="rounded-2xl text-darkblue/80 p-4 border-orange" type="text" id="fname" name="fname" placeholder="Email"><br>
-                <div class="flex flex-col gap-8 mb-10 mt-5">
-            <div class="flex gap-5">
-                <input class="p-3 border-orange" type="radio" id="html" name="månedligt" value="HTML">
-                <label for="html">Accepter vilkår og betingelser</label><br>
-            </div>
-            <div class="flex gap-5">
-                <input class="p-3 border-orange" type="radio" id="css" name="engang" value="CSS">
-                <label for="css">Modtag Plastic Changes nyhedsbrev</label><br>
-            </div>
-            </div>
-                <button class="bg-[#FF6F3C] text-[#013755] font-light px-20 py-4 md:px-28 md:py-3 rounded-2xl md:text-3xl transition-transform duration-300 hover:text-white hover:scale-105">Underskriv</button>
-        </div>
-    </section>
-    <div class="margin"></div>
+<section class="parallax flex flex-col items-center">
     
+    <div class="parallax-inner">
+        <div class="bg-white opacity-95 max-w-md p-10 rounded-md mx-auto flex flex-col">
+            <h1 class="text-darkblue text-7xl text-center">Bidrag her</h1>
+            <p class="mb-10 text-center">Du kan beskytte naturen, dyrelivet og vores børn mod plastik, ved at bidrage til os herunder.</p>
+            <div class="flex gap-16 mb-10">
+        <div class="flex gap-5">
+            <input class="p-3 border-orange" type="radio" id="html" name="månedligt" value="HTML">
+            <label class="text-orange" for="html">Månedligt</label><br>
+        </div>
+        <div class="flex gap-5">
+            <input class="p-3 border-orange" type="radio" id="css" name="engang" value="CSS">
+            <label for="css">Èn gang</label><br>
+        </div>
+        </div>
+        <div class="flex  gap-16">
+            <div class="flex flex-col text-center gap-3">
+                <input class="p-10 border-orange" type="radio" id="css" name="engang" value="CSS">
+                <label for="css">50</label><br>
+            </div>
+            <div class="flex flex-col text-center gap-3">
+            <input class="p-10 border-orange" type="radio" id="css" name="engang" value="CSS">
+            <label for="css">75</label><br>
+        </div>
+            <div class="flex flex-col text-center gap-3">
+            <input class="p-10 border-orange" type="radio" id="css" name="engang" value="CSS">
+            <label for="css">125</label><br>
+        </div>
+        </div>
+            <input class="rounded-2xl text-darkblue/80 p-4 border-orange" type="text" id="fname" name="fname" placeholder="Andet beløb"><br>
+            <button class="bg-[#FF6F3C] text-[#013755] font-light px-20 py-4 md:px-28 md:py-3 rounded-2xl md:text-3xl transition-transform duration-300 hover:text-white hover:scale-105">Donér nu</button>
+    </div>
+
+<div class="paravideo w-screen">
+    <video autoplay muted loop src="https://idaemilierichter.dk/kea/13_scrolly/formularbaggrund.mp4"></video>
+</div>
+
+    <div class="parallax-inner">
+       <div class="bg-white opacity-95 max-w-md p-10 rounded-md mx-auto flex flex-col">
+            <h1 class="text-darkblue text-7xl text-center">Skriv under</h1>
+            <p class=" mb-7 text-center">Kæmp sammen med os, og underskriv en global plastiktraktat, der lægger et loft over produktion af plastik.</p>
+            <p id="count-up" class="text-orange text-center text-4xl mb-3">0</p>
+            <p class="mb-8 text-center">har allerede skrevet under</p>
+            <input class="rounded-2xl text-darkblue/80 p-4 border-orange" type="text" id="fname" name="fname" placeholder="Email"><br>
+            <div class="flex flex-col gap-8 mb-10 mt-5">
+        <div class="flex gap-5">
+            <input class="p-3 border-orange" type="radio" id="html" name="månedligt" value="HTML">
+            <label for="html">Accepter vilkår og betingelser</label><br>
+        </div>
+        <div class="flex gap-5">
+            <input class="p-3 border-orange" type="radio" id="css" name="engang" value="CSS">
+            <label for="css">Modtag Plastic Changes nyhedsbrev</label><br>
+        </div>
+        </div>
+            <button class="bg-[#FF6F3C] text-[#013755] font-light px-20 py-4 md:px-28 md:py-3 rounded-2xl md:text-3xl transition-transform duration-300 hover:text-white hover:scale-105">Underskriv</button>
+    </div>
+</section>
+</section>
+
 <style>
-   
-
-    .parallax{
-        background: url(../assets/images/formularbaggrund.jpg) no-repeat fixed ;
-        background-size: cover;
+    .paravideo video{
+        min-height: 100%;
+        position: fixed;
+        top: 0;
+        z-index: -999;
     }
-
     .parallax-inner{
         padding-top: 40%;
         padding-bottom: 40%;
