@@ -211,6 +211,38 @@
   transform: translateY(-20px);
 }
 
+.dora {
+  animation-name: dora_kf;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dora_kf {
+  from {
+    translate: -50%;
+  }
+  to {
+    translate: 250%;
+  }
+}
+
+.nemo {
+  animation-name: nemo_kf;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes nemo_kf {
+  from {
+    translate: 250%;
+  }
+  to {
+    translate: -50%;
+  }
+}
+
 /* Større skærme styling */
 @media (min-width: 640px) {
   .container {
