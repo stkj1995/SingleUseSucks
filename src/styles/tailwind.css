@@ -71,7 +71,7 @@
     font-size: 16px; /* Valgfri skriftstørrelse */
     line-height: 1.5; /* Valgfri linjehøjde */
     margin-bottom: 20px; /* Margin under teksten */
-    font-weight: 400; /* Roboto Regular */
+    font-weight: 200; /* Roboto Regular */
   }
 
   .figcaption {
