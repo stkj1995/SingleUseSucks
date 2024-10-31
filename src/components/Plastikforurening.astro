@@ -1,4 +1,80 @@
 ---
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+import { Image } from 'astro:assets';
+import lastbil from "../assets/images/lastbil.svg";
+import skrald from "../assets/images/skrald.svg";
+import flaske from "../assets/images/flaske.svg";
+import "../styles/tobii.min.css"; 
+import { animate } from 'motion';
 ---
 
-<!-- bottom, link, animate, motion -->
+<!-- parallax w-auto bg-fixed h-screen w-100 bg-cover --> 
+
+<!-- div for hele afsnittet -->
+ <section class="bg-[#013755] w-screen ">
+
+    <!-- grid med lastbil, skrald og h1 -->
+    <div class="md:grid md:grid-cols-2 md:px-44 md:pt-20 md:gap-16">
+        <h1 class=" text-end text-white text-[60px] pr-8 pt-28 sticky md:order-1 md:pr-32 md:text-[80px] md:pl-20">Hvad er plastikforuening</h1>
+            <!-- container med lastbil og skrald til animation -->
+        <div class="">
+            <!-- skrald -->
+        <div class="">
+            <div class="w-36 relative top-28 left-5 md:w-60 md:relative md:left-28 md:top-36">
+                <Image src={skrald} alt=""/>
+            </div>
+            <div class="w-32 relative top-24 left-8 md:w-56 md:relative md:left-12 md:top-24">
+                <Image src={skrald} alt=""/>
+            </div>
+        </div>
+    
+              <!-- lastbil -->
+        <div class="w-64 pt-20 relative md:w-full">
+            <Image src={lastbil} alt="vektorgrafik af lastbil"/>
+           </div>
+        </div>
+    </div>
+    <div class="text-white py-8 px-16 md:grid md:grid-cols-2 md:p-20">
+        <p class="text-center font-light md:text-xl">I dag udleder vi <span class="font-bold">8-10 mio ton</span> plastik til havet. Det svarer til <span class="font-bold">1 lastbil</span> med plastik, der tømmes <span class="font-bold">hvert minut!</span></p>
+    </div>
+
+
+     <!-- datavis 2 flaske -->
+ <section class="bg-[#013755] pb-20 pt-16 md:pl-20">
+    <div class="w-[90vw] pl-16 md:grid md:grid-cols-2">
+        <Image src={flaske} alt="plastikflaske med fisk og skrald"/>
+    </div>
+
+    <div class="text-white py-8 px-16 md:grid md:grid-cols-2 ">
+        <p class="text-center font-light md:text-xl"> <span class="font-bold">5 % af det plastik</span> vi udleder flyder i overfladen, <span class="font-bold">mens 95% af det resterende plastik</span> ligger længere nede i vandsøjlen. </p>
+    </div>
+ </section>
+
+ </section>
+
+   
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

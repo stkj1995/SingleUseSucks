@@ -71,7 +71,11 @@
     font-size: 16px; /* Valgfri skriftstørrelse */
     line-height: 1.5; /* Valgfri linjehøjde */
     margin-bottom: 20px; /* Margin under teksten */
-    font-weight: 400; /* Roboto Regular */
+    font-weight: 200; /* Roboto Regular */
+  }
+
+  p {
+    font-weight: lighter;
   }
 
   .figcaption {
@@ -223,6 +227,10 @@
 
   .text {
     font-size: 18px; /* Større fontstørrelse for tekst */
+  }
+
+  p {
+    font-weight: lighter;
   }
 
   .button {
