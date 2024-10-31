@@ -28,6 +28,17 @@ export default {
         "22p": "35%",
         "8p": "20%",
       },
+
+      // animation på dora fisk
+      // keyframes: {
+      //   slideInLeft: {
+      //     "0%": { transform: "translateX(-100%)" }, // Start uden for venstre kant
+      //     "100%": { transform: "translateX(100%)" }, // Slut uden for højre kant
+      //   },
+      // },
+      // animation: {
+      //   slideInLeft: "slideInLeft 2s linear infinite", // Angiv animationens navn og timing
+      // },
     },
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],
