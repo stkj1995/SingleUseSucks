@@ -8,93 +8,92 @@ import industri from "../assets/images/industri.svg";
 import mad from "../assets/images/mad.svg";
 import olie from "../assets/images/olie.svg";
 ---
-
-<section class="bg-lightblue h-screen flex w-full w-screen">
-    <h2 class=" lg:text-8xl text-darkblue w-96 ml-20 pt-28">
-        Hvad er problemet med plastik-forurening? 
-    </h2>
+<section class="bg-lightblue h-screen flex w-screen">
+  <h2 class=" lg:text-8xl text-darkblue w-96 ml-20 pt-28">
+      Hvad er problemet med plastik-forurening? 
+  </h2>
 
 <div class="container">
-    <div class="center">Plastik</div>
-    
-    <div class="item item1">
-        <Image src={turtle}  class="w-40" alt="" />
-      <p>Truer havmiljøet</p>
-    </div>
-
-    <div class="item item2">
-        <Image src={mikroplast}  class="w-40" alt="" />
-      <p>Forsvinder ikke, men bliver til mikroplast</p>
-    </div>
-    
-    <div class="item item3">
-      <Image src={toxic}  class="w-40" alt="" />
-      <p>Indeholder skadelige kemikalier</p>
-    </div>
-    
-    <div class="item item4">
-      <Image src={industri}  class="w-40" alt="" />
-      <p>Bidrager til en voksende andel af CO2 regnskabet</p>
-    </div>
-    
-    <div class="item item5">
-      <Image src={mad}  class="w-40" alt="" />
-      <p>Kommer ind i fødekæden</p>
-    </div>
-    
-    <div class="item item6">
-      <Image src={olie}  class="w-40" alt="" />
-      <p>Lavet af olie</p>
-    </div>
+  <div class="center">Plastik</div>
+  
+  <div class="item item1">
+      <Image src={turtle}  class="w-40" alt="" />
+    <p>Truer havmiljøet</p>
   </div>
+
+  <div class="item item2">
+      <Image src={mikroplast}  class="w-40" alt="" />
+    <p>Forsvinder ikke, men bliver til mikroplast</p>
+  </div>
+  
+  <div class="item item3">
+    <Image src={toxic}  class="w-40" alt="" />
+    <p>Indeholder skadelige kemikalier</p>
+  </div>
+  
+  <div class="item item4">
+    <Image src={industri}  class="w-40" alt="" />
+    <p>Bidrager til en voksende andel af CO2 regnskabet</p>
+  </div>
+  
+  <div class="item item5">
+    <Image src={mad}  class="w-40" alt="" />
+    <p>Kommer ind i fødekæden</p>
+  </div>
+  
+  <div class="item item6">
+    <Image src={olie}  class="w-40" alt="" />
+    <p>Lavet af olie</p>
+  </div>
+</div>
 </section>
 
 
 
-  <style>
+<style>
 
-    .container {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .center {
-      font-size: 24px;
+  .center {
+    font-size: 24px;
 font-weight: lighter;
-      text-align: center;
-    }
+    text-align: center;
+  }
 
-    /* Position elements around the circle */
-    .item {
-      position: absolute;
-      width: 20%; /* Adjust as needed */
-      opacity: 0;
-      text-align: center;
-      font-weight: lighter;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
+  /* Position elements around the circle */
+  .item {
+    position: absolute;
+    width: 20%; /* Adjust as needed */
+    opacity: 0;
+    text-align: center;
+    font-weight: lighter;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
 
-    /* Circular positions */
-    .item1 { top: 7%; left: 42%; transform: translate(-50%, -20px); }
-    .item2 { top: 20%; left: 65%; transform: translate(-20px, -50%); }
-    .item3 { bottom: 18%; left: 65%; transform: translate(-50%, 20px); }
-    .item4 { bottom: 5%; left: 42%; transform: translate(-50%, 20px); }
-    .item5 { bottom: 25%; left: 20%; transform: translate(20px, -50%); }
-    .item6 { top: 20%; left: 20%; transform: translate(-50%, -20px); }
+  /* Circular positions */
+  .item1 { top: 7%; left: 42%; transform: translate(-50%, -20px); }
+  .item2 { top: 20%; left: 65%; transform: translate(-20px, -50%); }
+  .item3 { bottom: 18%; left: 65%; transform: translate(-50%, 20px); }
+  .item4 { bottom: 5%; left: 42%; transform: translate(-50%, 20px); }
+  .item5 { bottom: 25%; left: 20%; transform: translate(20px, -50%); }
+  .item6 { top: 20%; left: 20%; transform: translate(-50%, -20px); }
 
-    /* When visible */
-    .visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  /* When visible */
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-    .item img {
-      margin-bottom: 10px;
-    }
-  </style>
+  .item img {
+    margin-bottom: 10px;
+  }
+</style>
 
 
 <script>
@@ -102,24 +101,23 @@ font-weight: lighter;
 
 
 
-    const items = document.querySelectorAll('.item');
+  const items = document.querySelectorAll('.item');
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          // Delay each item based on its index for a staggered effect
-          setTimeout(() => {
-            entry.target.classList.add('visible');
-          }, index * 200); // 200ms delay between each item
-          observer.unobserve(entry.target); // Stop observing once the item is visible
-        }
-      });
-    }, {
-      threshold: 0.5
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Delay each item based on its index for a staggered effect
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, index * 200); // 200ms delay between each item
+        observer.unobserve(entry.target); // Stop observing once the item is visible
+      }
     });
+  }, {
+    threshold: 0.5
+  });
 
-    items.forEach(item => {
-      observer.observe(item);
-    });
-  </script>
-
+  items.forEach(item => {
+    observer.observe(item);
+  });
+</script>
