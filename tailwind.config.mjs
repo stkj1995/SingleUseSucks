@@ -5,18 +5,18 @@ export default {
     extend: {
       colors: {
         orange: "#FF6F3C", // Orange farve som du ønsker
-        darkblue: "#013755", //mørkeblå
-        lightblue: "#e6f6ff" /* Lyseblå */,
-        white: "#ffffff" /* Hvid */,
+        darkblue: "#013755", // Mørkeblå
+        lightblue: "#e6f6ff", // Lyseblå
+        white: "#ffffff", // Hvid
       },
       keyframes: {
-        bobble: {
-          "0%, 100%": { transform: "translateY(0) scale(1)" },
-          "50%": { transform: "translateY(-10px) scale(1.1)" },
+        changeColor: { // Tilføjet animation for farveskift
+          "0%": { color: "#013755" }, // Mørkeblå
+          "100%": { color: "#FF6F3C" }, // Orange
         },
       },
       animation: {
-        bobble: "bobble 1.5s ease-in-out infinite",
+        changeColor: "changeColor 10s forwards", // Kører animationen én gang
       },
       width: {
         "70p": "80%",
@@ -28,8 +28,17 @@ export default {
         "22p": "35%",
         "8p": "20%",
       },
+    },
+  },
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/container-queries"),
+  ],
+};
 
-      // animation på dora fisk
+// animation på dora fisk
       // keyframes: {
       //   slideInLeft: {
       //     "0%": { transform: "translateX(-100%)" }, // Start uden for venstre kant
@@ -39,7 +48,3 @@ export default {
       // animation: {
       //   slideInLeft: "slideInLeft 2s linear infinite", // Angiv animationens navn og timing
       // },
-    },
-  },
-  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],
-};
