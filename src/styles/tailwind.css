@@ -31,7 +31,7 @@
     font-family: "Roboto", sans-serif; /* Brug Roboto som skrifttype */
     margin: 0;
     padding: 0;
-    cursor: url("/src/assets/images/fish.png"), auto;
+    cursor: url("/src/assets/images/icons8-seahorse-48.png"), auto;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
