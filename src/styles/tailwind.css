@@ -74,6 +74,10 @@
     font-weight: 200; /* Roboto Regular */
   }
 
+  p {
+    font-weight: lighter;
+  }
+
   .figcaption {
     color: var(--white); /* Mørk blå farve */
     font-size: 16px; /* Valgfri skriftstørrelse */
@@ -223,6 +227,10 @@
 
   .text {
     font-size: 18px; /* Større fontstørrelse for tekst */
+  }
+
+  p {
+    font-weight: lighter;
   }
 
   .button {
