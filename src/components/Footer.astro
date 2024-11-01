@@ -661,20 +661,20 @@
 
 <script>
     document.addEventListener("mousemove", (event) => {
-    const cursorX = event.clientX;
-    const cursorY = event.clientY;
+        const cursorX = event.clientX;
+        const cursorY = event.clientY;
 
-    document.querySelectorAll(".follow_cursor").forEach((svg) => {
-        // Hent SVG's nuværende position
-        const svgX = svg.offsetLeft + svg.clientWidth / 2;
-        const svgY = svg.offsetTop + svg.clientHeight / 2;
-        
-        // Beregn forskellen mellem cursoren og SVG'ens position
-        const deltaX = cursorX - svgX;
-        const deltaY = cursorY - svgY;
+        document.querySelectorAll<HTMLElement>(".follow_cursor").forEach((svg) => {
+            // Hent SVG's nuværende position
+            const svgX = svg.offsetLeft + svg.clientWidth / 2;
+            const svgY = svg.offsetTop + svg.clientHeight / 2;
+            
+            // Beregn forskellen mellem cursoren og SVG'ens position
+            const deltaX = cursorX - svgX;
+            const deltaY = cursorY - svgY;
 
-        // Sæt SVG's nye position med en forsinkelse
-        svg.style.transform = `translate(${deltaX * 0.1}px, ${deltaY * 0.1}px)`;
+            // Sæt SVG's nye position med en forsinkelse
+            svg.style.transform = `translate(${deltaX * 0.1}px, ${deltaY * 0.1}px)`;
+        });
     });
-});
 </script>
