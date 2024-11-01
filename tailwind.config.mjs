@@ -12,7 +12,7 @@ export default {
       keyframes: {
         changeColor: { // Tilføjet animation for farveskift
           "0%": { color: "#013755" }, // Mørkeblå
-          "100%": { color: "#FF6F3C" }, // Orange
+          "100%": { color: "#E65100" }, // Mørk orange
         },
       },
       animation: {
